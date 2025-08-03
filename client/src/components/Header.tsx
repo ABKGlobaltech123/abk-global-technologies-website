@@ -47,9 +47,9 @@ export default function Header() {
                   <Link href="/data-management" className="block px-4 py-2 text-neutral-600 hover:bg-neutral-50 hover:text-primary transition-colors">
                     Data Management Solutions
                   </Link>
-                  <a href="#backup" className="block px-4 py-2 text-neutral-600 hover:bg-neutral-50 hover:text-primary transition-colors">
+                  <Link href="/backup" className="block px-4 py-2 text-neutral-600 hover:bg-neutral-50 hover:text-primary transition-colors">
                     Backup & Archival Solutions
-                  </a>
+                  </Link>
                   <Link href="/virtualization" className="block px-4 py-2 text-neutral-600 hover:bg-neutral-50 hover:text-primary transition-colors">
                     Virtualization Solutions
                   </Link>
@@ -63,15 +63,15 @@ export default function Header() {
               </button>
               <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                 <div className="py-2">
-                  <a href="#consulting" className="block px-4 py-2 text-neutral-600 hover:bg-neutral-50 hover:text-primary transition-colors">
+                  <Link href="/consulting" className="block px-4 py-2 text-neutral-600 hover:bg-neutral-50 hover:text-primary transition-colors">
                     Consulting
-                  </a>
+                  </Link>
                   <Link href="/managed-services" className="block px-4 py-2 text-neutral-600 hover:bg-neutral-50 hover:text-primary transition-colors">
                     Managed Services
                   </Link>
-                  <a href="#cloud" className="block px-4 py-2 text-neutral-600 hover:bg-neutral-50 hover:text-primary transition-colors">
+                  <Link href="/cloud" className="block px-4 py-2 text-neutral-600 hover:bg-neutral-50 hover:text-primary transition-colors">
                     Cloud Solutions
-                  </a>
+                  </Link>
                   <Link href="/support" className="block px-4 py-2 text-neutral-600 hover:bg-neutral-50 hover:text-primary transition-colors">
                     Support & Maintenance
                   </Link>
@@ -92,9 +92,9 @@ export default function Header() {
                   <Link href="/mission" className="block px-4 py-2 text-neutral-600 hover:bg-neutral-50 hover:text-primary transition-colors">
                     Our Mission
                   </Link>
-                  <a href="#clientele" className="block px-4 py-2 text-neutral-600 hover:bg-neutral-50 hover:text-primary transition-colors">
+                  <Link href="/clientele" className="block px-4 py-2 text-neutral-600 hover:bg-neutral-50 hover:text-primary transition-colors">
                     Our Clientele
-                  </a>
+                  </Link>
                   <Link href="/core-competence" className="block px-4 py-2 text-neutral-600 hover:bg-neutral-50 hover:text-primary transition-colors">
                     Our Core Competence
                   </Link>
@@ -148,9 +148,9 @@ export default function Header() {
                 <Link href="/data-management" className="block text-neutral-600 hover:text-primary transition-colors py-1">
                   Data Management Solutions
                 </Link>
-                <a href="#backup" className="block text-neutral-600 hover:text-primary transition-colors py-1">
+                <Link href="/backup" className="block text-neutral-600 hover:text-primary transition-colors py-1">
                   Backup & Archival Solutions
-                </a>
+                </Link>
                 <Link href="/virtualization" className="block text-neutral-600 hover:text-primary transition-colors py-1">
                   Virtualization Solutions
                 </Link>
@@ -159,15 +159,15 @@ export default function Header() {
             <div className="space-y-2">
               <div className="text-lg font-medium text-neutral-900 py-2">Services</div>
               <div className="pl-4 space-y-2">
-                <a href="#consulting" className="block text-neutral-600 hover:text-primary transition-colors py-1">
+                <Link href="/consulting" className="block text-neutral-600 hover:text-primary transition-colors py-1">
                   Consulting
-                </a>
+                </Link>
                 <Link href="/managed-services" className="block text-neutral-600 hover:text-primary transition-colors py-1">
                   Managed Services
                 </Link>
-                <a href="#cloud" className="block text-neutral-600 hover:text-primary transition-colors py-1">
+                <Link href="/cloud" className="block text-neutral-600 hover:text-primary transition-colors py-1">
                   Cloud Solutions
-                </a>
+                </Link>
                 <Link href="/support" className="block text-neutral-600 hover:text-primary transition-colors py-1">
                   Support & Maintenance
                 </Link>
@@ -179,9 +179,9 @@ export default function Header() {
                 <Link href="/mission" className="block text-neutral-600 hover:text-primary transition-colors py-1">
                   Our Mission
                 </Link>
-                <a href="#clientele" className="block text-neutral-600 hover:text-primary transition-colors py-1">
+                <Link href="/clientele" className="block text-neutral-600 hover:text-primary transition-colors py-1">
                   Our Clientele
-                </a>
+                </Link>
                 <Link href="/core-competence" className="block text-neutral-600 hover:text-primary transition-colors py-1">
                   Our Core Competence
                 </Link>

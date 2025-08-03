@@ -52,9 +52,9 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="#backup" className="text-neutral-400 hover:text-white transition-colors">
+                <Link href="/backup" className="text-neutral-400 hover:text-white transition-colors">
                   Backup & Archival Solutions
-                </a>
+                </Link>
               </li>
               <li>
                 <Link href="/virtualization" className="text-neutral-400 hover:text-white transition-colors">
@@ -69,9 +69,9 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-6">Services</h4>
             <ul className="space-y-3">
               <li>
-                <a href="#consulting" className="text-neutral-400 hover:text-white transition-colors">
+                <Link href="/consulting" className="text-neutral-400 hover:text-white transition-colors">
                   Consulting
-                </a>
+                </Link>
               </li>
               <li>
                 <Link href="/managed-services" className="text-neutral-400 hover:text-white transition-colors">
@@ -79,9 +79,9 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="#cloud" className="text-neutral-400 hover:text-white transition-colors">
+                <Link href="/cloud" className="text-neutral-400 hover:text-white transition-colors">
                   Cloud Solutions
-                </a>
+                </Link>
               </li>
               <li>
                 <Link href="/support" className="text-neutral-400 hover:text-white transition-colors">
@@ -101,9 +101,9 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a href="#clientele" className="text-neutral-400 hover:text-white transition-colors">
+                <Link href="/clientele" className="text-neutral-400 hover:text-white transition-colors">
                   Our Clientele
-                </a>
+                </Link>
               </li>
               <li>
                 <Link href="/core-competence" className="text-neutral-400 hover:text-white transition-colors">
