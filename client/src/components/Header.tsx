@@ -19,11 +19,12 @@ export default function Header() {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 hover:scale-105 transition-transform duration-300">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center floating">
-              <span className="text-white font-bold text-lg">ABK</span>
-            </div>
-            <span className="text-xl font-bold text-primary">ABK Global Technologies</span>
+          <Link href="/" className="flex items-center space-x-3 hover:scale-105 transition-transform duration-300">
+            <img 
+              src="/abk-logo.png" 
+              alt="ABK Global Technologies" 
+              className="h-12 w-auto object-contain floating"
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -125,7 +126,11 @@ export default function Header() {
       <div className={`mobile-menu fixed top-0 left-0 w-full h-full bg-white z-50 lg:hidden ${mobileMenuOpen ? 'active' : ''}`}>
         <div className="p-4">
           <div className="flex items-center justify-between mb-8">
-            <span className="text-xl font-bold text-primary">Menu</span>
+            <img 
+              src="/abk-logo.png" 
+              alt="ABK Global Technologies" 
+              className="h-10 w-auto object-contain"
+            />
             <button 
               className="text-neutral-600 hover:text-primary transition-colors"
               onClick={() => setMobileMenuOpen(false)}
