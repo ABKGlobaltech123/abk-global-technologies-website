@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a modern React-based corporate website for ABK Global Technologies, an IT solutions and services provider. The application showcases the company's various technology offerings including IT security, networking, data management, and cloud solutions. Built with a full-stack architecture using React frontend with TypeScript, Express.js backend, and PostgreSQL database integration through Drizzle ORM.
+This is a modern React-based corporate website for ABK Global Technologies, an IT solutions and services provider. The application showcases the company's various technology offerings including IT security, networking, data management, and cloud solutions. Built with a full-stack architecture using React frontend with TypeScript, Express.js backend, and PostgreSQL database integration through Drizzle ORM. Features a comprehensive contact form integrated with Formspree for reliable message handling.
 
 ## User Preferences
 
@@ -71,3 +71,10 @@ Preferred communication style: Simple, everyday language.
 - **Replit**: Development and hosting platform integration
 - **Static Assets**: Optimized asset serving with proper caching headers
 - **Environment Configuration**: Separate development and production configurations
+
+### Contact Form Integration
+- **Formspree Integration**: Professional contact form handling with Formspree service
+- **Client-side Validation**: Real-time form validation with visual feedback
+- **User Experience**: Loading states, success/error notifications, and form animations
+- **Setup Documentation**: Complete setup guide in FORMSPREE_SETUP.md
+- **Responsive Design**: Mobile-friendly form layout with accessibility features
