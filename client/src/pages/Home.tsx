@@ -1,0 +1,275 @@
+import { useState, useEffect } from "react";
+import { Link } from "wouter";
+import { Shield, Network, Database, Save, Cloud } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import ServiceCard from "@/components/ServiceCard";
+import ContactForm from "@/components/ContactForm";
+
+export default function Home() {
+  const [activeService, setActiveService] = useState('consulting');
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+    );
+
+    const cards = document.querySelectorAll('.fade-in');
+    cards.forEach(card => observer.observe(card));
+
+    return () => observer.disconnect();
+  }, []);
+
+  const serviceContent = {
+    consulting: {
+      title: "Consulting Services",
+      description: "Our Consulting Services cover advanced Virtualization, Cloud Computing, and Hyper-Converged Infrastructure to optimize IT performance. We ensure Backups & Disaster Recovery along with On-Premise & Cloud Storage for data security. Our solutions enhance Cybersecurity measures to safeguard businesses. We also specialize in Internet of Things (IoT) integration for smart connectivity."
+    },
+    managed: {
+      title: "Managed Services",
+      description: "ABK Global Technologies simplifies IT support by consolidating multiple vendor contracts into one expert-driven service. Our proactive onsite and remote support enhances availability, speeds up issue resolution, and minimizes downtime across your IT environment."
+    },
+    cloud: {
+      title: "Cloud Solutions",
+      description: "We provide cloud services across AWS, Azure, Google Cloud, and OpenStack. Our Cloud VDI solutions include AWS Workspaces, ensuring seamless virtual desktop experiences. For email, we offer Microsoft Office 365, G-Suite, and AWS WorkMail to enhance communication and collaboration."
+    },
+    support: {
+      title: "Support & Maintenance",
+      description: "Our technology partners offer proactive and predictive support, ensuring optimized IT investments and seamless operations. With advanced digital tools, we prevent issues before they escalate, maximizing uptime and efficiency. Our services include Workforce Solutions like Microsoft Office 365, Skype for Business, and Digital Workforce Portals, along with Digital Services such as Big Data, IoT, Cloud-Native Applications, and DevOps. Reach out for hassle-free, expert IT support."
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-neutral-50">
+      <Header />
+      
+      {/* Hero Section */}
+      <section id="home" className="hero-bg min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
+        {/* Background pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-white rounded-full"></div>
+          <div className="absolute top-3/4 right-1/4 w-24 h-24 bg-white rounded-full"></div>
+          <div className="absolute bottom-1/4 left-1/3 w-16 h-16 bg-white rounded-full"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 text-center relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+              <span className="block">Welcome to</span>
+              <span className="block text-accent">ABK Global Technologies</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-white/90 mb-8 font-medium">Your Vision, Our Innovation</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <a href="#solutions" className="bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-neutral-100 transition-colors duration-300 shadow-lg">
+                Explore Solutions
+              </a>
+              <Link href="/contact" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary transition-all duration-300">
+                Get Started
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Solutions Overview */}
+      <section id="solutions" className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">Our Exceptional Solutions</h2>
+            <p className="text-xl text-neutral-600 max-w-4xl mx-auto leading-relaxed">
+              We provide innovative digital solutions that enhance efficiency, optimize performance, and drive seamless business growth in a competitive landscape.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
+            <ServiceCard
+              icon={<Shield className="text-white text-2xl" />}
+              title="IT Security Solutions"
+              description="ABK Global Technologies offers IT security solutions, including Endpoint Security with TrendMicro, Kaspersky, McAfee, and Sophos, and Encryption with TrendMicro, WinMagic, and McAfee. Our Gateway Level Security features Palo Alto, Fortinet, SonicWALL, Checkpoint, Sophos, and Cisco for robust network protection."
+              colorClass="bg-primary"
+            />
+
+            <ServiceCard
+              icon={<Network className="text-white text-2xl" />}
+              title="IT Network Solutions"
+              description="ABK Global Technologies offers IT Networking Solutions, including Switches from Cisco, Arista, Ruckus, Dell EMC, Brocade, and Netgear, and Wireless Solutions from Arista, Aruba, Cisco, and Ruckus. We also provide Network Monitoring Solutions like WhatsUp Gold, SolarWinds, and NEC, along with Structured Cabling from CommScope, Panduit, Belden."
+              colorClass="bg-secondary"
+            />
+
+            <ServiceCard
+              icon={<Database className="text-white text-2xl" />}
+              title="Data Management Solutions"
+              description="ABK Global Technologies provides storage and server solutions, including NAS from Dell EMC, HP, Netgear, and QNAP, and SAN from Dell EMC, IBM, Pure Storage, NetApp, and HP. We also offer Unified Storage from Dell EMC, NetApp, IBM, and HP, Tape Library & Auto Loaders from Dell EMC, IBM, and HP, and Enterprise Servers from Dell EMC, HP, Lenovo, and NEC."
+              colorClass="bg-accent"
+            />
+
+            <ServiceCard
+              icon={<Save className="text-white text-2xl" />}
+              title="Backup & Archival Solutions"
+              description="ABK Global Technologies offers IT Networking Solutions, including Switches from Cisco, Arista, Ruckus, Dell EMC, Brocade, and Netgear, and Wireless Solutions from Arista, Aruba, Cisco, and Ruckus. We also provide Network Monitoring Solutions like WhatsUp Gold, SolarWinds, and NEC, along with Structured Cabling from CommScope, Panduit, Belden, and Molex for reliable connectivity."
+              colorClass="bg-green-600"
+            />
+
+            <div className="md:col-span-2 lg:col-span-1">
+              <ServiceCard
+                icon={<Cloud className="text-white text-2xl" />}
+                title="Virtualization Solutions"
+                description="ABK Global Technologies offers IT Networking Solutions, including Switches from Cisco, Arista, Ruckus, Dell EMC, Brocade, and Netgear, and Wireless Solutions from Arista, Aruba, Cisco, and Ruckus. We also provide Network Monitoring Solutions like WhatsUp Gold, SolarWinds, and NEC, along with Structured Cabling from CommScope, Panduit, Belden, and Molex for reliable connectivity."
+                colorClass="bg-purple-600"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Additional Services */}
+      <section className="py-20 bg-neutral-100">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-primary mb-6">Our Additional Services</h2>
+            <p className="text-xl text-neutral-600">Comprehensive technology services tailored to your business needs</p>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {Object.entries(serviceContent).map(([key, service]) => (
+              <button
+                key={key}
+                onClick={() => setActiveService(key)}
+                className={`px-8 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  activeService === key
+                    ? 'bg-primary text-white'
+                    : 'bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white'
+                }`}
+              >
+                {service.title.replace(' Services', '').replace(' Solutions', '').replace(' & Maintenance', '')}
+              </button>
+            ))}
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white p-8 rounded-2xl shadow-lg">
+              <h3 className="text-3xl font-bold text-primary mb-6">
+                {serviceContent[activeService as keyof typeof serviceContent].title}
+              </h3>
+              <p className="text-lg text-neutral-600 leading-relaxed">
+                {serviceContent[activeService as keyof typeof serviceContent].description}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Mission Section */}
+            <div id="mission" className="space-y-8">
+              <div>
+                <h2 className="text-4xl font-bold text-primary mb-6">Our Mission</h2>
+                <p className="text-lg text-neutral-600 leading-relaxed">
+                  ABK Global Technologies came into the competing Information Technology services industry with a mission to provide most efficient and economically friendly solutions to all our customers. Leon today has firm foothold as an emerging company in the field of system integration with the primary goal of offering infrastructure solutions, which include IT Consulting services and IT Infrastructure services.
+                </p>
+              </div>
+
+              <div id="core-competence">
+                <h3 className="text-2xl font-bold text-primary mb-4">Our Core Competence</h3>
+                <p className="text-neutral-600 leading-relaxed">
+                  At ABK Technologies, we believe in teamwork. Every day, we strive to master new competencies, pushing ourselves forward with dedication and innovation. We sincerely look forward to our customers' support as we build the future of secure communications.
+                </p>
+              </div>
+            </div>
+
+            {/* Goal and Clientele Section */}
+            <div className="space-y-8">
+              <div id="goal">
+                <h3 className="text-2xl font-bold text-primary mb-4">Our Goal</h3>
+                <p className="text-neutral-600 leading-relaxed">
+                  A clear perception of the growing requirement of the Corporate World in the area of IT has enabled ABK Global Technologies to develop the present for our customers by increasing value helping to create a more convenient and prosperous society, and creating peace of mind through the establishment of reliable networks.
+                </p>
+              </div>
+
+              <div id="clientele">
+                <h3 className="text-2xl font-bold text-primary mb-4">Our Clientele</h3>
+                <p className="text-neutral-600 leading-relaxed">
+                  With prestigious clients and repeated orders, our services and the quality of our products are among the best in the industry. At ABK Global Technologies, we focus on building strong customer relationships with every transaction. As a trusted technology service provider, we deliver end-to-end solutions through strategic development, consulting services, and expert execution by our highly trained and skilled engineers.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Partners Section */}
+      <section id="partners" className="py-20 bg-neutral-100">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-primary mb-6">Our Technology Partners</h2>
+            <p className="text-xl text-neutral-600">We collaborate with industry-leading technology partners to deliver exceptional solutions</p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center">
+            {['Cisco', 'Dell EMC', 'HP', 'IBM', 'Microsoft', 'Palo Alto'].map((partner) => (
+              <div key={partner} className="bg-white p-6 rounded-lg shadow-md text-center">
+                <div className="text-sm font-medium text-neutral-600">{partner}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-20 bg-primary text-white">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Contact Information */}
+            <div>
+              <h2 className="text-4xl font-bold mb-8">Contact Us</h2>
+              <div className="space-y-6">
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                    <i className="fas fa-envelope text-white"></i>
+                  </div>
+                  <div>
+                    <div className="font-medium">Email</div>
+                    <div className="text-white/80">support@abkglobal.tech</div>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                    <i className="fas fa-phone text-white"></i>
+                  </div>
+                  <div>
+                    <div className="font-medium">Phone</div>
+                    <div className="text-white/80">+91 8341051124</div>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center">
+                    <i className="fas fa-map-marker-alt text-white"></i>
+                  </div>
+                  <div>
+                    <div className="font-medium">Address</div>
+                    <div className="text-white/80">H501 Indis VB City Kompally, Hyderabad, India</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Contact Form */}
+            <ContactForm />
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}
