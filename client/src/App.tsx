@@ -1,4 +1,4 @@
-import { Switch, Route } from "wouter";
+import { Switch, Route, Router } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -20,26 +20,28 @@ import Clientele from "@/pages/Clientele";
 import Contact from "@/pages/Contact";
 import NotFound from "@/pages/not-found";
 
-function Router() {
+function AppRouter() {
   return (
-    <Switch>
-      <Route path="/" component={Home} />
-      <Route path="/it-security" component={ITSecurity} />
-      <Route path="/networking" component={Networking} />
-      <Route path="/data-management" component={DataManagement} />
-      <Route path="/backup" component={Backup} />
-      <Route path="/consulting" component={Consulting} />
-      <Route path="/managed-services" component={Managed} />
-      <Route path="/cloud" component={Cloud} />
-      <Route path="/support" component={Support} />
-      <Route path="/virtualization" component={Virtualization} />
-      <Route path="/mission" component={Mission} />
-      <Route path="/goal" component={Goal} />
-      <Route path="/core-competence" component={CoreCompetence} />
-      <Route path="/clientele" component={Clientele} />
-      <Route path="/contact" component={Contact} />
-      <Route component={NotFound} />
-    </Switch>
+    <Router base="/abk-global-technologies-website">
+      <Switch>
+        <Route path="/" component={Home} />
+        <Route path="/it-security" component={ITSecurity} />
+        <Route path="/networking" component={Networking} />
+        <Route path="/data-management" component={DataManagement} />
+        <Route path="/backup" component={Backup} />
+        <Route path="/consulting" component={Consulting} />
+        <Route path="/managed-services" component={Managed} />
+        <Route path="/cloud" component={Cloud} />
+        <Route path="/support" component={Support} />
+        <Route path="/virtualization" component={Virtualization} />
+        <Route path="/mission" component={Mission} />
+        <Route path="/goal" component={Goal} />
+        <Route path="/core-competence" component={CoreCompetence} />
+        <Route path="/clientele" component={Clientele} />
+        <Route path="/contact" component={Contact} />
+        <Route component={NotFound} />
+      </Switch>
+    </Router>
   );
 }
 
@@ -48,7 +50,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
-        <Router />
+        <AppRouter />
       </TooltipProvider>
     </QueryClientProvider>
   );
