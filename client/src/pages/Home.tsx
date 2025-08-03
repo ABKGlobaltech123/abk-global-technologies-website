@@ -51,13 +51,15 @@ export default function Home() {
       <Header />
       
       {/* Hero Section */}
-      <section id="home" className="hero-bg min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
-        {/* Background pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-white rounded-full"></div>
-          <div className="absolute top-3/4 right-1/4 w-24 h-24 bg-white rounded-full"></div>
-          <div className="absolute bottom-1/4 left-1/3 w-16 h-16 bg-white rounded-full"></div>
-        </div>
+      <section 
+        id="home" 
+        className="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden bg-cover bg-center bg-no-repeat"
+        style={{ 
+          backgroundImage: `linear-gradient(rgba(91, 31, 105, 0.7), rgba(32, 117, 255, 0.7)), url("/@assets/photo1_1754215174913.avif")` 
+        }}
+      >
+        {/* Background overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/20"></div>
         
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="max-w-4xl mx-auto">
