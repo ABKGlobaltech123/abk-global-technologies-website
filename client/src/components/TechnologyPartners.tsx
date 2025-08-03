@@ -4,7 +4,7 @@ const partnerLogos = [
   {
     name: 'Cisco',
     logo: (
-      <svg viewBox="0 0 200 80" className="w-24 h-12">
+      <svg viewBox="0 0 200 80" className="w-32 h-16">
         <g fill="#00bceb">
           <rect x="10" y="30" width="4" height="20"/>
           <rect x="16" y="26" width="4" height="28"/>
@@ -21,7 +21,7 @@ const partnerLogos = [
   {
     name: 'Dell EMC',
     logo: (
-      <svg viewBox="0 0 200 80" className="w-28 h-12">
+      <svg viewBox="0 0 200 80" className="w-36 h-16">
         <text x="10" y="30" fontSize="18" fontFamily="Arial, sans-serif" fontWeight="bold" fill="#007db8">DELL</text>
         <text x="10" y="55" fontSize="14" fontFamily="Arial, sans-serif" fontWeight="bold" fill="#007db8">EMC</text>
         <circle cx="170" cy="40" r="15" fill="#007db8"/>
@@ -31,7 +31,7 @@ const partnerLogos = [
   {
     name: 'HP',
     logo: (
-      <svg viewBox="0 0 200 80" className="w-20 h-12">
+      <svg viewBox="0 0 200 80" className="w-28 h-16">
         <circle cx="100" cy="40" r="30" fill="#0073e6"/>
         <text x="85" y="50" fontSize="24" fontFamily="Arial, sans-serif" fontWeight="bold" fill="white">hp</text>
       </svg>
@@ -40,7 +40,7 @@ const partnerLogos = [
   {
     name: 'IBM',
     logo: (
-      <svg viewBox="0 0 200 80" className="w-24 h-12">
+      <svg viewBox="0 0 200 80" className="w-32 h-16">
         <g fill="#006bb6">
           <rect x="20" y="20" width="160" height="8"/>
           <rect x="20" y="32" width="160" height="8"/>
@@ -57,7 +57,7 @@ const partnerLogos = [
   {
     name: 'Microsoft',
     logo: (
-      <svg viewBox="0 0 200 80" className="w-32 h-12">
+      <svg viewBox="0 0 200 80" className="w-40 h-16">
         <rect x="20" y="20" width="18" height="18" fill="#f25022"/>
         <rect x="42" y="20" width="18" height="18" fill="#7fba00"/>
         <rect x="20" y="42" width="18" height="18" fill="#00a4ef"/>
@@ -69,7 +69,7 @@ const partnerLogos = [
   {
     name: 'Palo Alto Networks',
     logo: (
-      <svg viewBox="0 0 200 80" className="w-36 h-12">
+      <svg viewBox="0 0 200 80" className="w-44 h-16">
         <circle cx="30" cy="40" r="20" fill="#fa582d"/>
         <circle cx="30" cy="40" r="12" fill="white"/>
         <circle cx="30" cy="40" r="6" fill="#fa582d"/>
@@ -93,7 +93,7 @@ export default function TechnologyPartners() {
           {partnerLogos.map((partner, index) => (
             <div 
               key={partner.name} 
-              className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 scale-in flex items-center justify-center"
+              className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 scale-in flex items-center justify-center min-h-[120px]"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex items-center justify-center">
