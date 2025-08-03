@@ -3,384 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABK Global Technologies - Your Vision, Our Innovation</title>
-    <meta name="description" content="ABK Global Technologies provides innovative IT solutions including security, networking, data management, and cloud services. Your trusted technology partner for digital transformation.">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <!-- CSS -->
+    <title>ABK Global Technologies</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="container">
-            <div class="nav">
-                <a href="#home" class="logo">
-                    <img src="./abk-logo.png" alt="ABK Global Technologies" class="logo-img floating">
-                </a>
-                
-                <div class="nav-links" id="navLinks">
-                    <a href="#home" class="nav-link">Home</a>
-                    <div class="dropdown">
-                        <a href="#services" class="nav-link dropdown-toggle">
-                            Solutions <i class="fas fa-chevron-down"></i>
-                        </a>
-                        <div class="dropdown-menu">
-                            <a href="#it-security" class="dropdown-item">IT Security Solutions</a>
-                            <a href="#networking" class="dropdown-item">IT Networking Solutions</a>
-                            <a href="#data-management" class="dropdown-item">Data Management Solutions</a>
-                            <a href="#backup" class="dropdown-item">Backup & Archival Solutions</a>
-                            <a href="#virtualization" class="dropdown-item">Virtualization Solutions</a>
-                        </div>
-                    </div>
-                    <div class="dropdown">
-                        <a href="#services" class="nav-link dropdown-toggle">
-                            Services <i class="fas fa-chevron-down"></i>
-                        </a>
-                        <div class="dropdown-menu">
-                            <a href="#consulting" class="dropdown-item">Consulting</a>
-                            <a href="#managed-services" class="dropdown-item">Managed Services</a>
-                            <a href="#cloud" class="dropdown-item">Cloud Solutions</a>
-                            <a href="#support" class="dropdown-item">Support & Maintenance</a>
-                        </div>
-                    </div>
-                    <a href="#partners" class="nav-link">Partners</a>
-                    <div class="dropdown">
-                        <a href="#about" class="nav-link dropdown-toggle">
-                            About Us <i class="fas fa-chevron-down"></i>
-                        </a>
-                        <div class="dropdown-menu">
-                            <a href="#mission" class="dropdown-item">Our Mission</a>
-                            <a href="#clientele" class="dropdown-item">Our Clientele</a>
-                            <a href="#core-competence" class="dropdown-item">Our Core Competence</a>
-                            <a href="#goal" class="dropdown-item">Our Goal</a>
-                        </div>
-                    </div>
-                    <a href="#contact" class="cta-button">Contact Us</a>
-                </div>
-                
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li>
+                    <a href="#solutions">What We Do</a>
+                    <ul class="dropdown">
+                        <li><a href="it_security.html">IT Security Solutions</a></li>
+                        <li><a href="networking.html">IT Networking Solutions</a></li>
+                        <li><a href="datamanagement.html">Data Management Solutions</a></li>
+                        <li><a href="backup.html">Backup & Archival Solutions</a></li>
+                        <li><a href="virtualization.html">Virtualization Solutions</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#services">Services</a>
+                    <ul class="dropdown">
+                        <li><a href="consulting.html">Consulting</a></li>
+                        <li><a href="managed.html">Managed Services</a></li>
+                        <li><a href="cloud.html">Cloud Solutions</a></li>
+                        <li><a href="support.html">Support & Maintenance</a></li>
+                    </ul>
+                </li>
+                <li><a href="#partners">Partners</a></li>
+                <li>
+                    <a href="#about">About Us</a>
+                    <ul class="dropdown">
+                        <li><a href="mission.html">Our Mission</a></li>
+                        <li><a href="clientele.html">Our Clientele</a></li>
+                        <li><a href="core.html">Our Core Competence</a></li>
+                        <li><a href="goal.html">Our Goal</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-bg"></div>
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="fade-in-up">Your Vision, Our Innovation</h1>
-                <p class="fade-in-up delay-200">Empowering businesses with cutting-edge IT solutions, security, and digital transformation services that drive growth and efficiency.</p>
-                <div class="hero-buttons fade-in-up delay-400">
-                    <a href="#services" class="btn-primary">Our Services</a>
-                    <a href="#contact" class="btn-secondary">Get Started</a>
-                </div>
-            </div>
+    <section id="banner">
+        <div class="content">
+            <h2><span class="welcome to">Welcome to</span> <span class="company">ABK Global Technologies</span></h2>
+            <h3>Your Vision, Our Innovation</h3>
+            <a href="#services" class="button scrolly">Explore Our Services</a>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <p class="section-subtitle">Comprehensive IT solutions tailored to meet your business needs and drive digital transformation.</p>
-            
-            <div class="services-grid">
-                <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>IT Security Solutions</h3>
-                    <p>Comprehensive security audits, risk assessments, and implementation of robust security frameworks to protect your digital assets from emerging threats and vulnerabilities.</p>
-                </div>
-                
-                <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-icon">
-                        <i class="fas fa-network-wired"></i>
-                    </div>
-                    <h3>IT Networking Solutions</h3>
-                    <p>Design, implementation, and optimization of network infrastructure including LAN/WAN setup, wireless solutions, and network security to ensure reliable connectivity.</p>
-                </div>
-                
-                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <h3>Data Management Solutions</h3>
-                    <p>Complete data lifecycle management including storage optimization, data governance, analytics platforms, and database administration for efficient data operations.</p>
-                </div>
-                
-                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="service-icon">
-                        <i class="fas fa-save"></i>
-                    </div>
-                    <h3>Backup & Archival Solutions</h3>
-                    <p>Reliable backup strategies, disaster recovery planning, and archival systems to ensure business continuity and data protection against any unforeseen circumstances.</p>
-                </div>
-                
-                <div class="service-card" data-aos="fade-up" data-aos-delay="500">
-                    <div class="service-icon">
-                        <i class="fas fa-cloud"></i>
-                    </div>
-                    <h3>Virtualization Solutions</h3>
-                    <p>Server and desktop virtualization services to optimize resource utilization, reduce hardware costs, and improve scalability and disaster recovery capabilities.</p>
-                </div>
-                
-                <div class="service-card" data-aos="fade-up" data-aos-delay="600">
-                    <div class="service-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h3>Managed Services</h3>
-                    <p>Proactive IT infrastructure management with 24/7 monitoring, maintenance, and support to ensure optimal performance and minimize downtime for your business operations.</p>
-                </div>
-            </div>
+    <section class="Services" id="solutions">
+        <h3>IT Security Solutions</h3>
+        <p>ABK Global Technologies offers IT security solutions, including Endpoint Security with TrendMicro, Kaspersky, McAfee, and Sophos, and Encryption with TrendMicro, WinMagic, and McAfee. Our Gateway Level Security features Palo Alto, Fortinet, SonicWALL, Checkpoint, Sophos, and Cisco for robust network protection.</p>
+    </section>
+    
+    <section class="Services1">
+        <h1>IT Network Solutions</h1>
+        <p>ABK Global Technologies offers IT Networking Solutions, including Switches from Cisco, Arista, Ruckus, Dell EMC, Brocade, and Netgear, and Wireless Solutions from Arista, Aruba, Cisco, and Ruckus. We also provide Network Monitoring Solutions like WhatsUp Gold, SolarWinds, and NEC, along with Structured Cabling from CommScope, Panduit, Belden.</p>
+    </section>
+    
+    <section class="Services3">
+        <h1>Data Management Solutions</h1>
+        <p>ABK Global Technologies provides storage and server solutions, including NAS from Dell EMC, HP, Netgear, and QNAP, and SAN from Dell EMC, IBM, Pure Storage, NetApp, and HP. We also offer Unified Storage from Dell EMC, NetApp, IBM, and HP, Tape Library & Auto Loaders from Dell EMC, IBM, and HP, and Enterprise Servers from Dell EMC, HP, Lenovo, and NEC.</p>
+    </section>
+    
+    <section class="Services4">
+        <h1>Backup & Archival Solutions</h1>
+        <p>ABK Global Technologies offers IT Networking Solutions, including Switches from Cisco, Arista, Ruckus, Dell EMC, Brocade, and Netgear, and Wireless Solutions from Arista, Aruba, Cisco, and Ruckus. We also provide Network Monitoring Solutions like WhatsUp Gold, SolarWinds, and NEC, along with Structured Cabling from CommScope, Panduit, Belden, and Molex for reliable connectivity.</p>
+    </section>
+    
+    <section class="Services5">
+        <h1>Virtualization Solutions</h1>
+        <p>ABK Global Technologies offers IT Networking Solutions, including Switches from Cisco, Arista, Ruckus, Dell EMC, Brocade, and Netgear, and Wireless Solutions from Arista, Aruba, Cisco, and Ruckus. We also provide Network Monitoring Solutions like WhatsUp Gold, SolarWinds, and NEC, along with Structured Cabling from CommScope, Panduit, Belden, and Molex for reliable connectivity.</p>
+    </section>
+    
+    <div class="divider"></div>
+    
+    <section class="services-section" id="services">
+        <h2>Our Services</h2>
+        <div class="button-container">
+            <a href="#" class="service-button" onclick="loadContent('service1')">Consulting Services</a>
+            <a href="#" class="service-button" onclick="loadContent('service2')">Managed Services</a>
+            <a href="#" class="service-button" onclick="loadContent('service3')">Cloud Solutions</a>
+            <a href="#" class="service-button" onclick="loadContent('service4')">Support Maintenance</a>
+        </div>
+        <div id="service-content">
+            <h3>Consulting Services</h3>
+            <p>Our Consulting Services cover advanced Virtualization, Cloud Computing, and Hyper-Converged Infrastructure to optimize IT performance. We ensure Backups & Disaster Recovery along with On-Premise & Cloud Storage for data security. Our solutions enhance Cybersecurity measures to safeguard businesses. We also specialize in Internet of Things (IoT) integration for smart connectivity.</p>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>About ABK Global Technologies</h2>
-                    <p>ABK Global Technologies stands as a beacon of innovation in the ever-evolving landscape of information technology. Our journey began with a simple yet powerful vision: to bridge the gap between cutting-edge technology and practical business solutions.</p>
-                    <p>With years of collective expertise, our team of certified professionals brings unparalleled dedication to every project. We understand that in today's digital age, technology isn't just a tool—it's the foundation upon which modern businesses thrive and grow.</p>
-                    
-                    <div class="features-grid">
-                        <div class="feature-item">
-                            <i class="fas fa-users"></i>
-                            <span>Expert team of certified IT professionals</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-clock"></i>
-                            <span>24/7 technical support and monitoring</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-puzzle-piece"></i>
-                            <span>Customized solutions for every business</span>
-                        </div>
-                        <div class="feature-item">
-                            <i class="fas fa-trophy"></i>
-                            <span>Proven track record of successful implementations</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="about-image">
-                    <img src="./photo1.avif" alt="ABK Global Technologies Office" class="floating">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Partners Section -->
-    <section id="partners" class="partners">
-        <div class="container">
-            <h2 class="section-title">Our Technology Partners</h2>
-            <p class="section-subtitle">We collaborate with industry leaders to deliver the best solutions for our clients.</p>
-            
-            <div class="partners-grid">
-                <div class="partner-card">
-                    <i class="fab fa-microsoft"></i>
-                    <h3>Microsoft</h3>
-                </div>
-                <div class="partner-card">
-                    <i class="fab fa-aws"></i>
-                    <h3>Amazon AWS</h3>
-                </div>
-                <div class="partner-card">
-                    <i class="fab fa-google"></i>
-                    <h3>Google Cloud</h3>
-                </div>
-                <div class="partner-card">
-                    <i class="fas fa-server"></i>
-                    <h3>Dell Technologies</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="section-subtitle">Ready to transform your business with our IT solutions? Contact us today for a consultation.</p>
-            
-            <div class="contact-content">
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="name">Full Name *</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email Address *</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                        </div>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="company">Company</label>
-                                <input type="text" id="company" name="company">
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" name="phone">
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="service">Service Interest</label>
-                            <select id="service" name="service">
-                                <option value="">Select a service</option>
-                                <option value="it-security">IT Security Solutions</option>
-                                <option value="networking">IT Networking Solutions</option>
-                                <option value="data-management">Data Management Solutions</option>
-                                <option value="backup">Backup & Archival Solutions</option>
-                                <option value="virtualization">Virtualization Solutions</option>
-                                <option value="managed-services">Managed Services</option>
-                                <option value="consulting">Consulting</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Message *</label>
-                            <textarea id="message" name="message" placeholder="Tell us about your project requirements, current challenges, or how we can help transform your IT infrastructure..." required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="submit-btn">
-                            <span class="btn-text">Send Message</span>
-                            <span class="btn-loading">Sending...</span>
-                        </button>
-                    </form>
-                </div>
-                
-                <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Email</h4>
-                            <p>info@abkglobal.tech</p>
-                            <p>support@abkglobal.tech</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Phone</h4>
-                            <p>+1 (555) 123-4567</p>
-                            <p>+1 (555) 123-4568</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Address</h4>
-                            <p>123 Business Avenue<br>Tech City, TC 12345<br>United States</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Business Hours</h4>
-                            <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                            <p>Saturday: 10:00 AM - 4:00 PM</p>
-                            <p>Sunday: Closed</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-logo">
-                        <img src="./abk-logo.png" alt="ABK Global Technologies" class="footer-logo-img">
-                    </div>
-                    <p>Your trusted partner for innovative IT solutions and digital transformation services. Empowering businesses with cutting-edge technology since our inception.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Solutions</h3>
-                    <ul class="footer-links">
-                        <li><a href="#services">IT Security Solutions</a></li>
-                        <li><a href="#services">Network Solutions</a></li>
-                        <li><a href="#services">Data Management</a></li>
-                        <li><a href="#services">Backup & Archival</a></li>
-                        <li><a href="#services">Virtualization</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Services</h3>
-                    <ul class="footer-links">
-                        <li><a href="#services">Consulting</a></li>
-                        <li><a href="#services">Managed Services</a></li>
-                        <li><a href="#services">Cloud Solutions</a></li>
-                        <li><a href="#services">Support & Maintenance</a></li>
-                        <li><a href="#about">Training Programs</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Company</h3>
-                    <ul class="footer-links">
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#mission">Our Mission</a></li>
-                        <li><a href="#clientele">Our Clientele</a></li>
-                        <li><a href="#contact">Contact Us</a></li>
-                        <li><a href="#partners">Partners</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <div class="footer-bottom-content">
-                    <p>&copy; 2025 ABK Global Technologies. All rights reserved.</p>
-                    <div class="footer-bottom-links">
-                        <a href="#privacy">Privacy Policy</a>
-                        <a href="#terms">Terms of Service</a>
-                        <a href="#sitemap">Sitemap</a>
-                    </div>
-                </div>
-            </div>
+    <footer>
+        <ul class="contact">
+            <li><a href="#" class="fab fa-facebook-f"></a></li>
+            <li><a href="#" class="fab fa-twitter"></a></li>
+            <li><a href="#" class="fab fa-linkedin-in"></a></li>
+            <li><a href="#" class="fab fa-instagram"></a></li>
+        </ul>
+        <div class="copyright">
+            &copy; 2024 ABK Global Technologies. All rights reserved.
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
