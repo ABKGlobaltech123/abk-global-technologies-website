@@ -19,8 +19,8 @@ export default function Header() {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
+          <Link href="/" className="flex items-center space-x-2 hover:scale-105 transition-transform duration-300">
+            <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center floating">
               <span className="text-white font-bold text-lg">ABK</span>
             </div>
             <span className="text-xl font-bold text-primary">ABK Global Technologies</span>
@@ -28,8 +28,9 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            <Link href="/" className="text-neutral-600 hover:text-primary transition-colors duration-300 font-medium">
+            <Link href="/" className="text-neutral-600 hover:text-primary transition-all duration-300 font-medium hover:scale-110 relative group">
               Home
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </Link>
             
             <div className="relative group">
