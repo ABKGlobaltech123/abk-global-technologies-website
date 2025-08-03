@@ -23,7 +23,7 @@ export default function Header() {
             <img 
               src="/abk-logo.png" 
               alt="ABK Global Technologies" 
-              className="h-12 w-auto object-contain floating"
+              className="h-16 w-auto object-contain floating"
             />
           </Link>
 
