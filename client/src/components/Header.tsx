@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X, ChevronDown } from "lucide-react";
+import abkLogo from "/abk-logo.png";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -21,7 +22,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 hover:scale-105 transition-transform duration-300">
             <img 
-              src="/abk-logo.png" 
+              src={abkLogo} 
               alt="ABK Global Technologies" 
               className="h-16 w-auto object-contain floating"
             />
@@ -127,7 +128,7 @@ export default function Header() {
         <div className="p-4">
           <div className="flex items-center justify-between mb-8">
             <img 
-              src="/abk-logo.png" 
+              src={abkLogo} 
               alt="ABK Global Technologies" 
               className="h-10 w-auto object-contain"
             />
