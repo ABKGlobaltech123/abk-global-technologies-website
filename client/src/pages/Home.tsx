@@ -55,7 +55,7 @@ export default function Home() {
         id="home" 
         className="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden bg-cover bg-center bg-no-repeat"
         style={{ 
-          backgroundImage: `linear-gradient(rgba(91, 31, 105, 0.7), rgba(32, 117, 255, 0.7)), url("/@assets/photo1_1754215174913.avif")` 
+          backgroundImage: `linear-gradient(rgba(91, 31, 105, 0.7), rgba(32, 117, 255, 0.7)), url("/photo1.avif")` 
         }}
       >
         {/* Background overlay for better text readability */}
