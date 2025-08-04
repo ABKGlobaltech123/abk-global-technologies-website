@@ -76,7 +76,7 @@ export default function Home() {
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight hero-text">
-              <div className="flex items-center justify-center">
+              <div className="flex items-center justify-center gap-2">
                 <img 
                   src={logoPath} 
                   alt="ABK" 
