@@ -76,7 +76,6 @@ export default function Home() {
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight hero-text">
-              <span className="block mb-4">Welcome to</span>
               <div className="flex items-center justify-center">
                 <img 
                   src={logoPath} 
