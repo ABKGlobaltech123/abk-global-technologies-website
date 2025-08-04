@@ -82,7 +82,7 @@ export default function Home() {
                   src={logoPath} 
                   alt="ABK" 
                   className="h-20 md:h-24 lg:h-32 w-auto object-contain brightness-150 contrast-125"
-                  style={{ filter: 'hue-rotate(60deg) saturate(2) brightness(1.8)' }}
+                  style={{ filter: 'hue-rotate(-60deg) saturate(2) brightness(1.8)' }}
                 />
                 <span className="text-accent">Global Technologies</span>
               </div>
