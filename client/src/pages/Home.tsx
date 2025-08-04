@@ -10,10 +10,14 @@ import TechnologyPartners from "@/components/TechnologyPartners";
 export default function Home() {
   const [activeService, setActiveService] = useState('consulting');
   
-  // Use different background image paths for development vs production
+  // Use different asset paths for development vs production
   const backgroundImagePath = import.meta.env.PROD 
     ? "/abk-global-technologies-website/photo1.avif" 
     : "/photo1.avif";
+  
+  const logoPath = import.meta.env.PROD 
+    ? "/abk-global-technologies-website/abk-logo-text.png" 
+    : "/abk-logo-text.png";
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -73,7 +77,14 @@ export default function Home() {
           <div className="max-w-4xl mx-auto">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight hero-text">
               <span className="block">Welcome to</span>
-              <span className="block text-accent">ABK Global Technologies</span>
+              <div className="flex items-center justify-center space-x-4">
+                <img 
+                  src={logoPath} 
+                  alt="ABK Global Technologies" 
+                  className="h-16 md:h-20 lg:h-24 w-auto object-contain"
+                />
+                <span className="block text-accent">Global Technologies</span>
+              </div>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 font-medium hero-text-delay">Your Vision, Our Innovation</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center hero-buttons">
