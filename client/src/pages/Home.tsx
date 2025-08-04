@@ -16,8 +16,8 @@ export default function Home() {
     : "/photo1.avif";
   
   const logoPath = import.meta.env.PROD 
-    ? "/abk-global-technologies-website/abk-logo-text.png" 
-    : "/abk-logo-text.png";
+    ? "/abk-global-technologies-website/abk-logo-new.png" 
+    : "/abk-logo-new.png";
 
   useEffect(() => {
     const observer = new IntersectionObserver(
