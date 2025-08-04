@@ -76,14 +76,14 @@ export default function Home() {
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight hero-text">
-              <span className="block">Welcome to</span>
-              <div className="flex items-center justify-center space-x-4">
+              <span className="block mb-4">Welcome to</span>
+              <div className="flex items-center justify-center space-x-3">
                 <img 
                   src={logoPath} 
-                  alt="ABK Global Technologies" 
-                  className="h-16 md:h-20 lg:h-24 w-auto object-contain"
+                  alt="ABK" 
+                  className="h-12 md:h-16 lg:h-20 w-auto object-contain"
                 />
-                <span className="block text-accent">Global Technologies</span>
+                <span className="text-accent">Global Technologies</span>
               </div>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 font-medium hero-text-delay">Your Vision, Our Innovation</p>
