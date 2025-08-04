@@ -16,8 +16,8 @@ export default function Home() {
     : "/photo1.avif";
   
   const logoPath = import.meta.env.PROD 
-    ? "/abk-global-technologies-website/abk-logo-new.png" 
-    : "/abk-logo-new.png";
+    ? "/abk-global-technologies-website/abk-logo.png" 
+    : "/abk-logo.png";
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -82,8 +82,19 @@ export default function Home() {
                   alt="ABK" 
                   className="h-20 md:h-24 lg:h-32 w-auto object-contain"
                   style={{ filter: 'brightness(2) contrast(1.5) invert(1)' }}
+                  onError={(e) => {
+                    console.log('Logo failed to load:', logoPath);
+                    // Hide broken image and show text fallback
+                    e.currentTarget.style.display = 'none';
+                    const fallback = e.currentTarget.nextElementSibling?.querySelector('.logo-fallback');
+                    if (fallback) fallback.style.display = 'inline';
+                  }}
+                  onLoad={() => console.log('Logo loaded successfully:', logoPath)}
                 />
-                <span className="text-white">Global Technologies</span>
+                <span className="text-white">
+                  <span className="logo-fallback" style={{ display: 'none' }}>ABK </span>
+                  Global Technologies
+                </span>
               </div>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 font-medium hero-text-delay">Your Vision, Our Innovation</p>
