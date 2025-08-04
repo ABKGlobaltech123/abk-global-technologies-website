@@ -1,16 +1,22 @@
 import { Link } from "wouter";
 
 export default function Footer() {
+  // Use different logo paths for development vs production
+  const logoPath = import.meta.env.PROD 
+    ? "/abk-global-technologies-website/abk-logo.png" 
+    : "/abk-logo.png";
   return (
     <footer className="bg-neutral-900 text-white py-12">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
           {/* Company Info */}
           <div>
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">ABK</span>
-              </div>
+            <div className="flex items-center space-x-3 mb-6">
+              <img 
+                src={logoPath} 
+                alt="ABK Global Technologies" 
+                className="h-12 w-auto object-contain"
+              />
               <span className="text-xl font-bold">ABK Global Technologies</span>
             </div>
             <p className="text-neutral-400 mb-6">
