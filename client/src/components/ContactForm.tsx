@@ -70,15 +70,17 @@ export default function ContactForm() {
     <div className="bg-white/10 p-8 rounded-2xl backdrop-blur-sm fade-in-right">
       <h3 className="text-2xl font-bold mb-6 text-white">Get in Touch</h3>
       
-      {/* Setup Instructions */}
-      <div className="mb-6 p-4 bg-yellow-500/20 border border-yellow-500/30 rounded-lg">
-        <p className="text-yellow-100 text-sm">
-          <strong>Setup Required:</strong> To activate this contact form, please:
-          <br />1. Sign up at <a href="https://formspree.io" target="_blank" rel="noopener noreferrer" className="underline hover:text-yellow-200">formspree.io</a>
-          <br />2. Create a new form and get your form ID
-          <br />3. Replace "YOUR_FORM_ID" in the code with your actual form ID
-        </p>
-      </div>
+      {/* Setup Instructions - Hidden for production */}
+      {process.env.NODE_ENV === 'development' && (
+        <div className="mb-6 p-4 bg-yellow-500/20 border border-yellow-500/30 rounded-lg">
+          <p className="text-yellow-100 text-sm">
+            <strong>Setup Required:</strong> To activate this contact form, please:
+            <br />1. Sign up at <a href="https://formspree.io" target="_blank" rel="noopener noreferrer" className="underline hover:text-yellow-200">formspree.io</a>
+            <br />2. Create a new form and get your form ID
+            <br />3. Replace "YOUR_FORM_ID" in the code with your actual form ID
+          </p>
+        </div>
+      )}
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid md:grid-cols-2 gap-4">
           <div className="relative">
