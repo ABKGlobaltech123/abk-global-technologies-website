@@ -77,7 +77,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight hero-text">
               <span className="block mb-4">Welcome to</span>
-              <div className="flex items-center justify-center space-x-3">
+              <div className="flex items-center justify-center space-x-1">
                 <img 
                   src={logoPath} 
                   alt="ABK" 
