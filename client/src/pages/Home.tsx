@@ -81,7 +81,7 @@ export default function Home() {
                 <img 
                   src={logoPath} 
                   alt="ABK" 
-                  className="h-12 md:h-16 lg:h-20 w-auto object-contain mr-1"
+                  className="h-12 md:h-16 lg:h-20 w-auto object-contain"
                 />
                 <span className="text-accent">Global Technologies</span>
               </div>
