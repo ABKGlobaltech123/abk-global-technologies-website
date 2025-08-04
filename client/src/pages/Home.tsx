@@ -84,7 +84,7 @@ export default function Home() {
                   className="h-20 md:h-24 lg:h-32 w-auto object-contain"
                   style={{ filter: 'brightness(2) contrast(1.5) invert(1)' }}
                 />
-                <span className="text-accent">Global Technologies</span>
+                <span className="text-white">Global Technologies</span>
               </div>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 font-medium hero-text-delay">Your Vision, Our Innovation</p>
