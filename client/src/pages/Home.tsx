@@ -9,6 +9,11 @@ import TechnologyPartners from "@/components/TechnologyPartners";
 
 export default function Home() {
   const [activeService, setActiveService] = useState('consulting');
+  
+  // Use different background image paths for development vs production
+  const backgroundImagePath = import.meta.env.PROD 
+    ? "/abk-global-technologies-website/photo1.avif" 
+    : "/photo1.avif";
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -58,7 +63,7 @@ export default function Home() {
         id="home" 
         className="min-h-screen flex items-start justify-center pt-32 md:pt-40 relative overflow-hidden bg-cover bg-center bg-no-repeat"
         style={{ 
-          backgroundImage: `linear-gradient(rgba(91, 31, 105, 0.7), rgba(32, 117, 255, 0.7)), url("/photo1.avif")` 
+          backgroundImage: `linear-gradient(rgba(91, 31, 105, 0.7), rgba(32, 117, 255, 0.7)), url("${backgroundImagePath}")` 
         }}
       >
         {/* Background overlay for better text readability */}
