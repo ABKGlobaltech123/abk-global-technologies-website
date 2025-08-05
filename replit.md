@@ -78,3 +78,19 @@ Preferred communication style: Simple, everyday language.
 - **User Experience**: Loading states, success/error notifications, and form animations
 - **Setup Documentation**: Complete setup guide in FORMSPREE_SETUP.md
 - **Responsive Design**: Mobile-friendly form layout with accessibility features
+
+### GitHub Pages Deployment
+- **Custom Domain**: Configured for www.abkglobal.tech with CNAME file
+- **Static Build**: Vite builds optimized static files to dist/public directory
+- **GitHub Actions**: Automated deployment workflow for continuous integration
+- **DNS Configuration**: A records pointing to GitHub Pages servers required
+- **Asset Optimization**: Root-path asset references for custom domain compatibility
+
+## Recent Changes (January 2025)
+
+### GitHub Pages Setup
+- Added CNAME file with custom domain www.abkglobal.tech to client/public directory
+- Created GitHub Actions workflow for automated deployment (.github/workflows/deploy.yml)
+- Configured Vite build to generate GitHub Pages compatible static files
+- Removed base path configuration to ensure proper custom domain functionality
+- Built and tested static files for production deployment
