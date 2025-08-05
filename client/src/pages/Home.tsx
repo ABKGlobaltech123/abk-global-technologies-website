@@ -76,9 +76,8 @@ export default function Home() {
                   src={logoPath} 
                   alt="ABK" 
                   className="h-16 md:h-20 lg:h-24 w-auto object-contain"
-                  style={{ filter: 'hue-rotate(270deg) saturate(2) brightness(1.2)' }}
                 />
-                <span className="text-purple-300 text-center md:text-left">Global Technologies</span>
+                <span className="text-white text-center md:text-left">Global Technologies</span>
               </div>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 mb-8 font-medium hero-text-delay">Your Vision, Our Innovation</p>
