@@ -72,11 +72,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight hero-text">
               <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4">
-                <img 
-                  src={logoPath} 
-                  alt="ABK" 
-                  className="h-20 md:h-28 lg:h-36 w-auto object-contain"
-                />
+                <span className="text-white text-center md:text-left">ABK</span>
                 <span className="text-white text-center md:text-left">Global Technologies</span>
               </div>
             </h1>
