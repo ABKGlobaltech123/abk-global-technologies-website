@@ -10,14 +10,9 @@ import TechnologyPartners from "@/components/TechnologyPartners";
 export default function Home() {
   const [activeService, setActiveService] = useState('consulting');
   
-  // Use different asset paths for development vs production
-  const backgroundImagePath = import.meta.env.PROD 
-    ? "/abk-global-technologies-website/photo1.avif" 
-    : "/photo1.avif";
-  
-  const logoPath = import.meta.env.PROD 
-    ? "/abk-global-technologies-website/abk-logo-new.png" 
-    : "/abk-logo-new.png";
+  // Use root paths for both development and production (custom domain)
+  const backgroundImagePath = "/photo1.avif";
+  const logoPath = "/abk-logo-new.png";
 
   useEffect(() => {
     const observer = new IntersectionObserver(
