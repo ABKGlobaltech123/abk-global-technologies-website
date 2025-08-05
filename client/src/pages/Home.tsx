@@ -72,7 +72,12 @@ export default function Home() {
           <div className="max-w-4xl mx-auto">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight hero-text">
               <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4">
-                <span className="text-purple-400 font-extrabold text-4xl md:text-5xl lg:text-6xl">ABK</span>
+                <img 
+                  src={logoPath} 
+                  alt="ABK" 
+                  className="h-16 md:h-20 lg:h-24 w-auto object-contain"
+                  style={{ filter: 'brightness(2) contrast(1.5) invert(1)' }}
+                />
                 <span className="text-white text-center md:text-left">Global Technologies</span>
               </div>
             </h1>
