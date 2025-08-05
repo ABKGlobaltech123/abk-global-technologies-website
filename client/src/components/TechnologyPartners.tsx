@@ -19,7 +19,7 @@ const partnerLogos = [
   {
     name: 'HP',
     logoSrc: '/hp-logo.jpg',
-    className: 'w-full h-full object-contain scale-75'
+    className: 'w-full h-full object-contain scale-50'
   },
   {
     name: 'Basenet',
