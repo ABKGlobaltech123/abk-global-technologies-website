@@ -8,17 +8,22 @@ const partnerLogos = [
   },
   {
     name: 'Palo Alto Networks',
-    logoSrc: '/palo-alto-logo.png',
+    logoSrc: '/palo-alto-logo-new.jpg',
     className: 'w-full h-full object-contain'
   },
   {
     name: 'Dell EMC',
-    logoSrc: '/dell-emc-logo.webp',
+    logoSrc: '/dell-emc-logo-new.png',
     className: 'w-full h-full object-contain'
   },
   {
     name: 'HP',
     logoSrc: '/hp-logo.jpg',
+    className: 'w-full h-full object-contain scale-75'
+  },
+  {
+    name: 'Basenet',
+    logoSrc: '/basenet-logo.png',
     className: 'w-full h-full object-contain'
   }
 ];
@@ -32,7 +37,7 @@ export default function TechnologyPartners() {
           <p className="text-xl text-neutral-600">We collaborate with industry-leading technology partners to deliver exceptional solutions</p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center">
           {partnerLogos.map((partner, index) => (
             <div 
               key={partner.name} 
