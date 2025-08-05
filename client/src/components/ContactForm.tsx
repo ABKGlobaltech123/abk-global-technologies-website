@@ -90,7 +90,7 @@ export default function ContactForm() {
               placeholder="Your Name"
               value={formData.name}
               onChange={handleChange}
-              className={`w-full px-4 py-3 bg-white/30 border rounded-lg text-white placeholder-[#ffffff] focus:outline-none transition-all duration-300 ${
+              className={`w-full px-4 py-3 bg-white/30 border rounded-lg text-white placeholder-black focus:outline-none transition-all duration-300 ${
                 formData.name.length >= 2 ? 'border-green-400 focus:border-green-300' : 'border-white/30 focus:border-white'
               }`}
               style={{ color: '#ffffff', fontWeight: '500' }}
