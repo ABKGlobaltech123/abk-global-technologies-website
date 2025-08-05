@@ -68,7 +68,7 @@ export default function Home() {
         {/* Background overlay for better text readability */}
         <div className="absolute inset-0 bg-black/20"></div>
         
-        <div className="container mx-auto px-4 text-center relative z-10">
+        <div className="container mx-auto px-4 text-center relative z-10 mt-20 md:mt-32">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight hero-text">
               <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4">
