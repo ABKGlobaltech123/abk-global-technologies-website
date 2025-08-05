@@ -15,7 +15,7 @@ export default function Footer() {
                 alt="ABK Global Technologies" 
                 className="h-12 w-auto object-contain"
               />
-              <span className="text-xl font-bold">ABK Global Technologies</span>
+              
             </div>
             <p className="text-neutral-400 mb-6">
               Your Vision, Our Innovation. Leading technology solutions provider delivering exceptional IT services and innovative digital solutions.
