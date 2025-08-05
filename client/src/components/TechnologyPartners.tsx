@@ -4,22 +4,22 @@ const partnerLogos = [
   {
     name: 'Cisco',
     logoSrc: '/cisco-logo.png',
-    className: 'w-32 h-16 object-contain'
+    className: 'w-full h-full object-contain'
   },
   {
     name: 'Palo Alto Networks',
     logoSrc: '/palo-alto-logo.png',
-    className: 'w-44 h-16 object-contain'
+    className: 'w-full h-full object-contain'
   },
   {
     name: 'Dell EMC',
     logoSrc: '/dell-emc-logo.webp',
-    className: 'w-36 h-16 object-contain'
+    className: 'w-full h-full object-contain'
   },
   {
     name: 'HP',
     logoSrc: '/hp-logo.jpg',
-    className: 'w-28 h-16 object-contain'
+    className: 'w-full h-full object-contain'
   }
 ];
 
@@ -36,16 +36,14 @@ export default function TechnologyPartners() {
           {partnerLogos.map((partner, index) => (
             <div 
               key={partner.name} 
-              className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 scale-in flex items-center justify-center min-h-[120px]"
+              className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 scale-in flex items-center justify-center min-h-[120px]"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="flex items-center justify-center">
-                <img 
-                  src={partner.logoSrc} 
-                  alt={partner.name} 
-                  className={partner.className}
-                />
-              </div>
+              <img 
+                src={partner.logoSrc} 
+                alt={partner.name} 
+                className={partner.className}
+              />
             </div>
           ))}
         </div>
