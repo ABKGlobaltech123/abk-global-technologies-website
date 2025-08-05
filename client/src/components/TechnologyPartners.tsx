@@ -18,7 +18,7 @@ const partnerLogos = [
   },
   {
     name: 'HP',
-    logoSrc: '/hp-logo.jpg',
+    logoSrc: '/hp-logo-new.png',
     className: 'w-full h-full object-contain'
   },
   {
