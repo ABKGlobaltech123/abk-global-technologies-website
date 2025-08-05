@@ -21,8 +21,8 @@ import Contact from "@/pages/Contact";
 import NotFound from "@/pages/not-found";
 
 function AppRouter() {
-  // Use base path only in production (GitHub Pages)
-  const basePath = import.meta.env.PROD ? "/abk-global-technologies-website" : "";
+  // No base path needed for custom domain
+  const basePath = "";
   
   return (
     <Router base={basePath}>

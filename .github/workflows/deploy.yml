@@ -31,7 +31,7 @@ jobs:
         run: npm install
 
       - name: Build with Vite
-        run: npx vite build
+        run: npx vite build && node fix-github-pages.js
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
