@@ -41,7 +41,7 @@ export default function TechnologyPartners() {
           {partnerLogos.map((partner, index) => (
             <div 
               key={partner.name} 
-              className={`bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 scale-in flex items-center justify-center min-h-[120px] ${partner.name === 'HP' ? 'w-20 h-20' : ''}`}
+              className="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 scale-in flex items-center justify-center min-h-[120px]"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <img 
