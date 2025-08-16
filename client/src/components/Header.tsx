@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, Shield, Network, Database, Save, Cloud } from "lucide-react";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -39,25 +39,71 @@ export default function Header() {
             
             <div className="relative group">
               <button className="text-neutral-600 hover:text-primary transition-colors duration-300 font-medium flex items-center">
-                Solutions <ChevronDown className="ml-1 h-4 w-4" />
+                Solutions <ChevronDown className="ml-1 h-4 w-4 group-hover:rotate-180 transition-transform duration-300" />
               </button>
-              <div className="absolute top-full left-0 mt-2 w-64 bg-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                <div className="py-2">
-                  <Link href="/it-security" className="block px-4 py-2 text-neutral-600 hover:bg-neutral-50 hover:text-primary transition-colors">
-                    IT Security Solutions
-                  </Link>
-                  <Link href="/networking" className="block px-4 py-2 text-neutral-600 hover:bg-neutral-50 hover:text-primary transition-colors">
-                    IT Networking Solutions
-                  </Link>
-                  <Link href="/data-management" className="block px-4 py-2 text-neutral-600 hover:bg-neutral-50 hover:text-primary transition-colors">
-                    Data Management Solutions
-                  </Link>
-                  <Link href="/backup" className="block px-4 py-2 text-neutral-600 hover:bg-neutral-50 hover:text-primary transition-colors">
-                    Backup & Archival Solutions
-                  </Link>
-                  <Link href="/virtualization" className="block px-4 py-2 text-neutral-600 hover:bg-neutral-50 hover:text-primary transition-colors">
-                    Virtualization Solutions
-                  </Link>
+              <div className="absolute top-full left-0 mt-3 w-80 bg-white/95 backdrop-blur-xl shadow-2xl rounded-2xl border border-white/20 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-1">
+                <div className="p-4">
+                  <div className="mb-3">
+                    <h4 className="text-xs font-semibold text-primary uppercase tracking-wider mb-3">Core Solutions</h4>
+                  </div>
+                  <div className="space-y-1">
+                    <Link href="#solutions" className="flex items-center p-3 rounded-xl hover:bg-gradient-to-r hover:from-primary/10 hover:to-primary/5 transition-all duration-300 group/item">
+                      <div className="w-10 h-10 bg-gradient-to-br from-primary to-primary/80 rounded-lg flex items-center justify-center mr-4 group-hover/item:scale-110 transition-transform duration-300">
+                        <Shield className="w-5 h-5 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="font-semibold text-neutral-900 text-sm">IT Security Solutions</div>
+                        <div className="text-xs text-neutral-600">Endpoint, Gateway & Encryption</div>
+                      </div>
+                    </Link>
+                    
+                    <Link href="#solutions" className="flex items-center p-3 rounded-xl hover:bg-gradient-to-r hover:from-secondary/10 hover:to-secondary/5 transition-all duration-300 group/item">
+                      <div className="w-10 h-10 bg-gradient-to-br from-secondary to-secondary/80 rounded-lg flex items-center justify-center mr-4 group-hover/item:scale-110 transition-transform duration-300">
+                        <Network className="w-5 h-5 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="font-semibold text-neutral-900 text-sm">IT Network Solutions</div>
+                        <div className="text-xs text-neutral-600">Switches, Wireless & Monitoring</div>
+                      </div>
+                    </Link>
+                    
+                    <Link href="#solutions" className="flex items-center p-3 rounded-xl hover:bg-gradient-to-r hover:from-accent/10 hover:to-accent/5 transition-all duration-300 group/item">
+                      <div className="w-10 h-10 bg-gradient-to-br from-accent to-accent/80 rounded-lg flex items-center justify-center mr-4 group-hover/item:scale-110 transition-transform duration-300">
+                        <Database className="w-5 h-5 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="font-semibold text-neutral-900 text-sm">Data Management</div>
+                        <div className="text-xs text-neutral-600">Storage, Servers & Enterprise</div>
+                      </div>
+                    </Link>
+                    
+                    <Link href="#solutions" className="flex items-center p-3 rounded-xl hover:bg-gradient-to-r hover:from-green-600/10 hover:to-green-500/5 transition-all duration-300 group/item">
+                      <div className="w-10 h-10 bg-gradient-to-br from-green-600 to-green-500 rounded-lg flex items-center justify-center mr-4 group-hover/item:scale-110 transition-transform duration-300">
+                        <Save className="w-5 h-5 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="font-semibold text-neutral-900 text-sm">Backup & Archival</div>
+                        <div className="text-xs text-neutral-600">Protection & Disaster Recovery</div>
+                      </div>
+                    </Link>
+                    
+                    <Link href="#solutions" className="flex items-center p-3 rounded-xl hover:bg-gradient-to-r hover:from-purple-600/10 hover:to-purple-500/5 transition-all duration-300 group/item">
+                      <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-purple-500 rounded-lg flex items-center justify-center mr-4 group-hover/item:scale-110 transition-transform duration-300">
+                        <Cloud className="w-5 h-5 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="font-semibold text-neutral-900 text-sm">Virtualization Solutions</div>
+                        <div className="text-xs text-neutral-600">Scalable Infrastructure</div>
+                      </div>
+                    </Link>
+                  </div>
+                  
+                  <div className="border-t border-neutral-200 mt-4 pt-4">
+                    <Link href="#solutions" className="flex items-center justify-center p-3 bg-gradient-to-r from-primary to-secondary text-white rounded-xl hover:shadow-lg transition-all duration-300 hover:scale-105">
+                      <span className="font-semibold text-sm">View All Solutions</span>
+                      <ChevronDown className="w-4 h-4 ml-2 rotate-[-90deg]" />
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
