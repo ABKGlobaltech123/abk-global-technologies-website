@@ -154,9 +154,6 @@ export default function Home() {
         
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-20 fade-in-up">
-            <div className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-4">
-              COMPREHENSIVE SOLUTIONS
-            </div>
             <h2 className="text-5xl lg:text-6xl font-bold text-primary mb-6 bg-gradient-to-r from-primary to-primary/80 bg-clip-text">
               Additional Services
             </h2>
