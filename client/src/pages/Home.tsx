@@ -219,19 +219,19 @@ export default function Home() {
                 Let our experts help you choose the perfect solution for your business needs.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a 
-                  href="#contact" 
+                <Link
+                  href="/it-security" 
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-primary/30 transition-all duration-300 hover:scale-105"
                 >
-                  Explore Solutions
+                  View All Solutions
                   <i className="fas fa-arrow-right ml-3"></i>
-                </a>
-                <a 
-                  href="#contact" 
+                </Link>
+                <Link
+                  href="/contact" 
                   className="inline-flex items-center px-8 py-4 border-2 border-primary text-primary font-semibold rounded-2xl hover:bg-primary hover:text-white transition-all duration-300 hover:scale-105"
                 >
                   Schedule Consultation
-                </a>
+                </Link>
               </div>
             </div>
           </div>
