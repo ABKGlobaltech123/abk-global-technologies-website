@@ -90,7 +90,7 @@ export default function ContactForm() {
               placeholder="Your Name (min 2 characters)"
               value={formData.name}
               onChange={handleChange}
-              className={`w-full px-4 py-3 bg-white/30 border rounded-lg text-white placeholder-gray-300 focus:outline-none transition-all duration-300 ${
+              className={`w-full px-4 py-3 bg-white/30 border rounded-lg text-white placeholder-gray-100 focus:outline-none transition-all duration-300 ${
                 formData.name.length >= 2 ? 'border-green-400 focus:border-green-300' : 'border-white/30 focus:border-white'
               }`}
               style={{ color: '#ffffff', fontWeight: '500' }}
@@ -107,7 +107,7 @@ export default function ContactForm() {
               placeholder="Your Email"
               value={formData.email}
               onChange={handleChange}
-              className={`w-full px-4 py-3 bg-white/30 border rounded-lg text-white placeholder-gray-300 focus:outline-none transition-all duration-300 ${
+              className={`w-full px-4 py-3 bg-white/30 border rounded-lg text-white placeholder-gray-100 focus:outline-none transition-all duration-300 ${
                 formData.email.includes('@') && formData.email.length > 5 ? 'border-green-400 focus:border-green-300' : 'border-white/30 focus:border-white'
               }`}
               style={{ color: '#ffffff', fontWeight: '500' }}
@@ -125,7 +125,7 @@ export default function ContactForm() {
             placeholder="Subject (min 5 characters)"
             value={formData.subject}
             onChange={handleChange}
-            className={`w-full px-4 py-3 bg-white/30 border rounded-lg text-white placeholder-gray-300 focus:outline-none transition-all duration-300 ${
+            className={`w-full px-4 py-3 bg-white/30 border rounded-lg text-white placeholder-gray-100 focus:outline-none transition-all duration-300 ${
               formData.subject.length >= 5 ? 'border-green-400 focus:border-green-300' : 'border-white/30 focus:border-white'
             }`}
             style={{ color: '#ffffff', fontWeight: '500' }}
@@ -142,7 +142,7 @@ export default function ContactForm() {
             placeholder="Your Message (min 10 characters)"
             value={formData.message}
             onChange={handleChange}
-            className={`w-full px-4 py-3 bg-white/30 border rounded-lg text-white placeholder-gray-300 focus:outline-none transition-all duration-300 resize-none ${
+            className={`w-full px-4 py-3 bg-white/30 border rounded-lg text-white placeholder-gray-100 focus:outline-none transition-all duration-300 resize-none ${
               formData.message.length >= 10 ? 'border-green-400 focus:border-green-300' : 'border-white/30 focus:border-white'
             }`}
             style={{ color: '#ffffff', fontWeight: '500' }}
