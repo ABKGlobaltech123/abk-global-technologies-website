@@ -19,6 +19,7 @@ import CoreCompetence from "@/pages/CoreCompetence";
 import Clientele from "@/pages/Clientele";
 import Contact from "@/pages/Contact";
 import NotFound from "@/pages/not-found";
+import MobileContactFooter from "@/components/MobileContactFooter";
 
 function AppRouter() {
   // No base path needed for custom domain
@@ -54,6 +55,7 @@ function App() {
       <TooltipProvider>
         <Toaster />
         <AppRouter />
+        <MobileContactFooter />
       </TooltipProvider>
     </QueryClientProvider>
   );
