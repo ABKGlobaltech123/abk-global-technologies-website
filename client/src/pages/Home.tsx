@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
-import { Shield, Network, Database, Save, Cloud, Settings, Monitor, Headphones } from "lucide-react";
+import { Shield, Network, Database, Save, Cloud, Settings, Wrench, Headphones } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
@@ -43,7 +43,7 @@ export default function Home() {
     managed: {
       title: "Managed Services",
       description: "ABK Global Technologies simplifies IT support by consolidating multiple vendor contracts into one expert-driven service. Our proactive onsite and remote support enhances availability, speeds up issue resolution, and minimizes downtime across your IT environment.",
-      icon: Monitor
+      icon: Wrench
     },
     cloud: {
       title: "Cloud Solutions",
