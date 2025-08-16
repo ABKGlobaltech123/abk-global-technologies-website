@@ -84,13 +84,14 @@ export default function ContactForm() {
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid md:grid-cols-2 gap-4">
           <div className="relative">
+            <label className="block text-white text-sm font-medium mb-2">Your Name (min 2 characters)</label>
             <Input
               type="text"
               name="name"
-              placeholder="Your Name (min 2 characters)"
+              placeholder=""
               value={formData.name}
               onChange={handleChange}
-              className={`w-full px-4 py-3 bg-white/30 border rounded-lg text-white placeholder-white focus:outline-none transition-all duration-300 ${
+              className={`w-full px-4 py-3 bg-white/30 border rounded-lg text-white focus:outline-none transition-all duration-300 ${
                 formData.name.length >= 2 ? 'border-green-400 focus:border-green-300' : 'border-white/30 focus:border-white'
               }`}
               style={{ color: '#ffffff', fontWeight: '500' }}
@@ -101,13 +102,14 @@ export default function ContactForm() {
             )}
           </div>
           <div className="relative">
+            <label className="block text-white text-sm font-medium mb-2">Your Email</label>
             <Input
               type="email"
               name="email"
-              placeholder="Your Email"
+              placeholder=""
               value={formData.email}
               onChange={handleChange}
-              className={`w-full px-4 py-3 bg-white/30 border rounded-lg text-white placeholder-white focus:outline-none transition-all duration-300 ${
+              className={`w-full px-4 py-3 bg-white/30 border rounded-lg text-white focus:outline-none transition-all duration-300 ${
                 formData.email.includes('@') && formData.email.length > 5 ? 'border-green-400 focus:border-green-300' : 'border-white/30 focus:border-white'
               }`}
               style={{ color: '#ffffff', fontWeight: '500' }}
@@ -119,13 +121,14 @@ export default function ContactForm() {
           </div>
         </div>
         <div className="relative">
+          <label className="block text-white text-sm font-medium mb-2">Subject (min 5 characters)</label>
           <Input
             type="text"
             name="subject"
-            placeholder="Subject (min 5 characters)"
+            placeholder=""
             value={formData.subject}
             onChange={handleChange}
-            className={`w-full px-4 py-3 bg-white/30 border rounded-lg text-white placeholder-white focus:outline-none transition-all duration-300 ${
+            className={`w-full px-4 py-3 bg-white/30 border rounded-lg text-white focus:outline-none transition-all duration-300 ${
               formData.subject.length >= 5 ? 'border-green-400 focus:border-green-300' : 'border-white/30 focus:border-white'
             }`}
             style={{ color: '#ffffff', fontWeight: '500' }}
@@ -136,13 +139,14 @@ export default function ContactForm() {
           )}
         </div>
         <div className="relative">
+          <label className="block text-white text-sm font-medium mb-2">Your Message (min 10 characters)</label>
           <Textarea
             name="message"
             rows={4}
-            placeholder="Your Message (min 10 characters)"
+            placeholder=""
             value={formData.message}
             onChange={handleChange}
-            className={`w-full px-4 py-3 bg-white/30 border rounded-lg text-white placeholder-white focus:outline-none transition-all duration-300 resize-none ${
+            className={`w-full px-4 py-3 bg-white/30 border rounded-lg text-white focus:outline-none transition-all duration-300 resize-none ${
               formData.message.length >= 10 ? 'border-green-400 focus:border-green-300' : 'border-white/30 focus:border-white'
             }`}
             style={{ color: '#ffffff', fontWeight: '500' }}
