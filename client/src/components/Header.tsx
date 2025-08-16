@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, ChevronDown, Shield, Network, Database, Save, Cloud } from "lucide-react";
+import { Menu, X, ChevronDown, Shield, Network, Database, Save, Cloud, Lightbulb, Wrench, Headphones, Target, Users, Award, TrendingUp } from "lucide-react";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -110,22 +110,54 @@ export default function Header() {
 
             <div className="relative group">
               <button className="text-neutral-600 hover:text-primary transition-colors duration-300 font-medium flex items-center">
-                Services <ChevronDown className="ml-1 h-4 w-4" />
+                Services <ChevronDown className="ml-1 h-4 w-4 group-hover:rotate-180 transition-transform duration-300" />
               </button>
-              <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                <div className="py-2">
-                  <Link href="/consulting" className="block px-4 py-2 text-neutral-600 hover:bg-neutral-50 hover:text-primary transition-colors">
-                    Consulting
-                  </Link>
-                  <Link href="/managed-services" className="block px-4 py-2 text-neutral-600 hover:bg-neutral-50 hover:text-primary transition-colors">
-                    Managed Services
-                  </Link>
-                  <Link href="/cloud" className="block px-4 py-2 text-neutral-600 hover:bg-neutral-50 hover:text-primary transition-colors">
-                    Cloud Solutions
-                  </Link>
-                  <Link href="/support" className="block px-4 py-2 text-neutral-600 hover:bg-neutral-50 hover:text-primary transition-colors">
-                    Support & Maintenance
-                  </Link>
+              <div className="absolute top-full left-0 mt-3 w-72 bg-white shadow-2xl rounded-2xl border border-neutral-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                <div className="p-4">
+                  <div className="mb-3">
+                    <h4 className="text-xs font-semibold text-primary uppercase tracking-wider mb-3">Professional Services</h4>
+                  </div>
+                  <div className="space-y-1">
+                    <Link href="/consulting" className="flex items-center p-3 rounded-xl hover:bg-gradient-to-r hover:from-primary/10 hover:to-primary/5 transition-all duration-300 group/item">
+                      <div className="w-10 h-10 bg-gradient-to-br from-primary to-primary/80 rounded-lg flex items-center justify-center mr-4 group-hover/item:scale-110 transition-transform duration-300">
+                        <Lightbulb className="w-5 h-5 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="font-semibold text-neutral-900 text-sm">Consulting Services</div>
+                        <div className="text-xs text-neutral-600">Strategic IT consulting & planning</div>
+                      </div>
+                    </Link>
+                    
+                    <Link href="/managed-services" className="flex items-center p-3 rounded-xl hover:bg-gradient-to-r hover:from-secondary/10 hover:to-secondary/5 transition-all duration-300 group/item">
+                      <div className="w-10 h-10 bg-gradient-to-br from-secondary to-secondary/80 rounded-lg flex items-center justify-center mr-4 group-hover/item:scale-110 transition-transform duration-300">
+                        <Wrench className="w-5 h-5 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="font-semibold text-neutral-900 text-sm">Managed Services</div>
+                        <div className="text-xs text-neutral-600">Proactive IT support & management</div>
+                      </div>
+                    </Link>
+                    
+                    <Link href="/cloud" className="flex items-center p-3 rounded-xl hover:bg-gradient-to-r hover:from-accent/10 hover:to-accent/5 transition-all duration-300 group/item">
+                      <div className="w-10 h-10 bg-gradient-to-br from-accent to-accent/80 rounded-lg flex items-center justify-center mr-4 group-hover/item:scale-110 transition-transform duration-300">
+                        <Cloud className="w-5 h-5 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="font-semibold text-neutral-900 text-sm">Cloud Solutions</div>
+                        <div className="text-xs text-neutral-600">AWS, Azure, Google Cloud services</div>
+                      </div>
+                    </Link>
+                    
+                    <Link href="/support" className="flex items-center p-3 rounded-xl hover:bg-gradient-to-r hover:from-green-600/10 hover:to-green-500/5 transition-all duration-300 group/item">
+                      <div className="w-10 h-10 bg-gradient-to-br from-green-600 to-green-500 rounded-lg flex items-center justify-center mr-4 group-hover/item:scale-110 transition-transform duration-300">
+                        <Headphones className="w-5 h-5 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="font-semibold text-neutral-900 text-sm">Support & Maintenance</div>
+                        <div className="text-xs text-neutral-600">24/7 support & digital services</div>
+                      </div>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -136,22 +168,54 @@ export default function Header() {
             
             <div className="relative group">
               <button className="text-neutral-600 hover:text-primary transition-colors duration-300 font-medium flex items-center">
-                About Us <ChevronDown className="ml-1 h-4 w-4" />
+                About Us <ChevronDown className="ml-1 h-4 w-4 group-hover:rotate-180 transition-transform duration-300" />
               </button>
-              <div className="absolute top-full left-0 mt-2 w-52 bg-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                <div className="py-2">
-                  <Link href="/mission" className="block px-4 py-2 text-neutral-600 hover:bg-neutral-50 hover:text-primary transition-colors">
-                    Our Mission
-                  </Link>
-                  <Link href="/clientele" className="block px-4 py-2 text-neutral-600 hover:bg-neutral-50 hover:text-primary transition-colors">
-                    Our Clientele
-                  </Link>
-                  <Link href="/core-competence" className="block px-4 py-2 text-neutral-600 hover:bg-neutral-50 hover:text-primary transition-colors">
-                    Our Core Competence
-                  </Link>
-                  <Link href="/goal" className="block px-4 py-2 text-neutral-600 hover:bg-neutral-50 hover:text-primary transition-colors">
-                    Our Goal
-                  </Link>
+              <div className="absolute top-full left-0 mt-3 w-72 bg-white shadow-2xl rounded-2xl border border-neutral-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                <div className="p-4">
+                  <div className="mb-3">
+                    <h4 className="text-xs font-semibold text-primary uppercase tracking-wider mb-3">Company Information</h4>
+                  </div>
+                  <div className="space-y-1">
+                    <Link href="/mission" className="flex items-center p-3 rounded-xl hover:bg-gradient-to-r hover:from-primary/10 hover:to-primary/5 transition-all duration-300 group/item">
+                      <div className="w-10 h-10 bg-gradient-to-br from-primary to-primary/80 rounded-lg flex items-center justify-center mr-4 group-hover/item:scale-110 transition-transform duration-300">
+                        <Target className="w-5 h-5 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="font-semibold text-neutral-900 text-sm">Our Mission</div>
+                        <div className="text-xs text-neutral-600">Vision & core values</div>
+                      </div>
+                    </Link>
+                    
+                    <Link href="/clientele" className="flex items-center p-3 rounded-xl hover:bg-gradient-to-r hover:from-secondary/10 hover:to-secondary/5 transition-all duration-300 group/item">
+                      <div className="w-10 h-10 bg-gradient-to-br from-secondary to-secondary/80 rounded-lg flex items-center justify-center mr-4 group-hover/item:scale-110 transition-transform duration-300">
+                        <Users className="w-5 h-5 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="font-semibold text-neutral-900 text-sm">Our Clientele</div>
+                        <div className="text-xs text-neutral-600">Trusted client partnerships</div>
+                      </div>
+                    </Link>
+                    
+                    <Link href="/core-competence" className="flex items-center p-3 rounded-xl hover:bg-gradient-to-r hover:from-accent/10 hover:to-accent/5 transition-all duration-300 group/item">
+                      <div className="w-10 h-10 bg-gradient-to-br from-accent to-accent/80 rounded-lg flex items-center justify-center mr-4 group-hover/item:scale-110 transition-transform duration-300">
+                        <Award className="w-5 h-5 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="font-semibold text-neutral-900 text-sm">Core Competence</div>
+                        <div className="text-xs text-neutral-600">Expertise & capabilities</div>
+                      </div>
+                    </Link>
+                    
+                    <Link href="/goal" className="flex items-center p-3 rounded-xl hover:bg-gradient-to-r hover:from-green-600/10 hover:to-green-500/5 transition-all duration-300 group/item">
+                      <div className="w-10 h-10 bg-gradient-to-br from-green-600 to-green-500 rounded-lg flex items-center justify-center mr-4 group-hover/item:scale-110 transition-transform duration-300">
+                        <TrendingUp className="w-5 h-5 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <div className="font-semibold text-neutral-900 text-sm">Our Goal</div>
+                        <div className="text-xs text-neutral-600">Future objectives & growth</div>
+                      </div>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
