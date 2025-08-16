@@ -94,51 +94,145 @@ export default function Home() {
       </section>
 
       {/* Solutions Overview */}
-      <section id="solutions" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16 fade-in-up">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">Our Exceptional Solutions</h2>
-            <p className="text-xl text-neutral-600 max-w-4xl mx-auto leading-relaxed">
+      <section id="solutions" className="py-24 bg-gradient-to-br from-white via-neutral-50 to-white relative overflow-hidden">
+        {/* Modern background graphics */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-10 left-1/4 w-96 h-96 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 right-1/4 w-80 h-80 bg-gradient-to-tl from-accent/20 to-primary/20 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-10 w-64 h-64 bg-gradient-to-r from-secondary/15 to-accent/15 rounded-full blur-2xl"></div>
+        </div>
+        
+        {/* Geometric patterns */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-20 right-20 w-32 h-32 border border-primary rotate-45"></div>
+          <div className="absolute bottom-32 left-16 w-24 h-24 border border-secondary rotate-12"></div>
+          <div className="absolute top-1/3 right-1/3 w-16 h-16 bg-accent rounded-full"></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="text-center mb-20 fade-in-up">
+            <div className="inline-block px-6 py-3 bg-gradient-to-r from-primary/10 to-secondary/10 text-primary rounded-full text-sm font-semibold mb-6 backdrop-blur-sm">
+              INNOVATIVE TECHNOLOGY
+            </div>
+            <h2 className="text-5xl lg:text-6xl font-bold mb-8 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+              Our Exceptional Solutions
+            </h2>
+            <p className="text-xl text-neutral-600 max-w-4xl mx-auto leading-relaxed font-medium">
               We provide innovative digital solutions that enhance efficiency, optimize performance, and drive seamless business growth in a competitive landscape.
             </p>
           </div>
 
           <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
-            <ServiceCard
-              icon={<Shield className="text-white text-2xl" />}
-              title="IT Security Solutions"
-              description="ABK Global Technologies offers IT security solutions, including Endpoint Security with TrendMicro, Kaspersky, McAfee, and Sophos, and Encryption with TrendMicro, WinMagic, and McAfee. Our Gateway Level Security features Palo Alto, Fortinet, SonicWALL, Checkpoint, Sophos, and Cisco for robust network protection."
-              colorClass="bg-primary"
-            />
+            {/* Enhanced Service Cards with Modern Graphics */}
+            <div className="group relative overflow-hidden bg-gradient-to-br from-primary to-primary/80 p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 fade-in-up">
+              {/* Card background graphics */}
+              <div className="absolute inset-0 opacity-20">
+                <div className="absolute -top-10 -right-10 w-32 h-32 bg-white rounded-full blur-2xl"></div>
+                <div className="absolute -bottom-5 -left-5 w-24 h-24 bg-white/50 rounded-full blur-xl"></div>
+              </div>
+              
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Shield className="text-white text-3xl" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">IT Security Solutions</h3>
+                <p className="text-white/90 leading-relaxed">
+                  Comprehensive security solutions including Endpoint Security, Encryption, and Gateway Level Security with industry-leading partners like Palo Alto, Fortinet, and Cisco for robust network protection.
+                </p>
+              </div>
+            </div>
 
-            <ServiceCard
-              icon={<Network className="text-white text-2xl" />}
-              title="IT Network Solutions"
-              description="ABK Global Technologies offers IT Networking Solutions, including Switches from Cisco, Arista, Ruckus, Dell EMC, Brocade, and Netgear, and Wireless Solutions from Arista, Aruba, Cisco, and Ruckus. We also provide Network Monitoring Solutions like WhatsUp Gold, SolarWinds, and NEC, along with Structured Cabling from CommScope, Panduit, Belden."
-              colorClass="bg-secondary"
-            />
+            <div className="group relative overflow-hidden bg-gradient-to-br from-secondary to-secondary/80 p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 fade-in-up" style={{ animationDelay: '0.1s' }}>
+              <div className="absolute inset-0 opacity-20">
+                <div className="absolute -top-8 -left-8 w-28 h-28 bg-white rounded-full blur-xl"></div>
+                <div className="absolute -bottom-6 -right-6 w-20 h-20 bg-white/60 rounded-full blur-lg"></div>
+              </div>
+              
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Network className="text-white text-3xl" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">IT Network Solutions</h3>
+                <p className="text-white/90 leading-relaxed">
+                  Advanced networking infrastructure including Switches, Wireless Solutions, Network Monitoring, and Structured Cabling from premier brands like Cisco, Arista, and Ruckus.
+                </p>
+              </div>
+            </div>
 
-            <ServiceCard
-              icon={<Database className="text-white text-2xl" />}
-              title="Data Management Solutions"
-              description="ABK Global Technologies provides storage and server solutions, including NAS from Dell EMC, HP, Netgear, and QNAP, and SAN from Dell EMC, IBM, Pure Storage, NetApp, and HP. We also offer Unified Storage from Dell EMC, NetApp, IBM, and HP, Tape Library & Auto Loaders from Dell EMC, IBM, and HP, and Enterprise Servers from Dell EMC, HP, Lenovo, and NEC."
-              colorClass="bg-accent"
-            />
+            <div className="group relative overflow-hidden bg-gradient-to-br from-accent to-accent/80 p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 fade-in-up" style={{ animationDelay: '0.2s' }}>
+              <div className="absolute inset-0 opacity-20">
+                <div className="absolute -top-12 -right-12 w-36 h-36 bg-white rounded-full blur-3xl"></div>
+                <div className="absolute -bottom-4 -left-4 w-18 h-18 bg-white/40 rounded-full blur-sm"></div>
+              </div>
+              
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Database className="text-white text-3xl" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">Data Management Solutions</h3>
+                <p className="text-white/90 leading-relaxed">
+                  Comprehensive storage solutions including NAS, SAN, Unified Storage, Tape Libraries, and Enterprise Servers from Dell EMC, HP, IBM, NetApp, and Pure Storage.
+                </p>
+              </div>
+            </div>
 
-            <ServiceCard
-              icon={<Save className="text-white text-2xl" />}
-              title="Backup & Archival Solutions"
-              description="ABK Global Technologies offers IT Networking Solutions, including Switches from Cisco, Arista, Ruckus, Dell EMC, Brocade, and Netgear, and Wireless Solutions from Arista, Aruba, Cisco, and Ruckus. We also provide Network Monitoring Solutions like WhatsUp Gold, SolarWinds, and NEC, along with Structured Cabling from CommScope, Panduit, Belden, and Molex for reliable connectivity."
-              colorClass="bg-green-600"
-            />
+            <div className="group relative overflow-hidden bg-gradient-to-br from-green-600 to-green-500 p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 fade-in-up" style={{ animationDelay: '0.3s' }}>
+              <div className="absolute inset-0 opacity-20">
+                <div className="absolute -top-6 -left-6 w-24 h-24 bg-white rounded-full blur-lg"></div>
+                <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-white/50 rounded-full blur-2xl"></div>
+              </div>
+              
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Save className="text-white text-3xl" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">Backup & Archival Solutions</h3>
+                <p className="text-white/90 leading-relaxed">
+                  Reliable data protection and archival systems ensuring business continuity with automated backup solutions and disaster recovery planning for complete peace of mind.
+                </p>
+              </div>
+            </div>
 
-            <div className="md:col-span-2 lg:col-span-1">
-              <ServiceCard
-                icon={<Cloud className="text-white text-2xl" />}
-                title="Virtualization Solutions"
-                description="ABK Global Technologies offers IT Networking Solutions, including Switches from Cisco, Arista, Ruckus, Dell EMC, Brocade, and Netgear, and Wireless Solutions from Arista, Aruba, Cisco, and Ruckus. We also provide Network Monitoring Solutions like WhatsUp Gold, SolarWinds, and NEC, along with Structured Cabling from CommScope, Panduit, Belden, and Molex for reliable connectivity."
-                colorClass="bg-purple-600"
-              />
+            <div className="md:col-span-2 lg:col-span-1 group relative overflow-hidden bg-gradient-to-br from-purple-600 to-purple-500 p-8 rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 fade-in-up" style={{ animationDelay: '0.4s' }}>
+              <div className="absolute inset-0 opacity-20">
+                <div className="absolute -top-10 -right-6 w-40 h-40 bg-white rounded-full blur-3xl"></div>
+                <div className="absolute -bottom-6 -left-10 w-28 h-28 bg-white/60 rounded-full blur-xl"></div>
+              </div>
+              
+              <div className="relative z-10">
+                <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Cloud className="text-white text-3xl" />
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-4">Virtualization Solutions</h3>
+                <p className="text-white/90 leading-relaxed">
+                  Advanced virtualization technologies enabling scalable, efficient infrastructure management with reduced costs and enhanced performance for modern business needs.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom CTA Section */}
+          <div className="text-center mt-20 fade-in-up">
+            <div className="max-w-3xl mx-auto">
+              <h3 className="text-3xl font-bold text-primary mb-4">Ready to Transform Your IT Infrastructure?</h3>
+              <p className="text-neutral-600 text-lg mb-8">
+                Let our experts help you choose the perfect solution for your business needs.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a 
+                  href="#contact" 
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-primary/30 transition-all duration-300 hover:scale-105"
+                >
+                  Explore Solutions
+                  <i className="fas fa-arrow-right ml-3"></i>
+                </a>
+                <a 
+                  href="#contact" 
+                  className="inline-flex items-center px-8 py-4 border-2 border-primary text-primary font-semibold rounded-2xl hover:bg-primary hover:text-white transition-all duration-300 hover:scale-105"
+                >
+                  Schedule Consultation
+                </a>
+              </div>
             </div>
           </div>
         </div>
