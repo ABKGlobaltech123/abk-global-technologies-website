@@ -25,6 +25,11 @@ const partnerLogos = [
     name: 'Basenet',
     logoSrc: '/basenet-logo.png',
     className: 'w-full h-full object-contain'
+  },
+  {
+    name: 'Lenovo',
+    logoSrc: '/lenovo-logo.png',
+    className: 'w-full h-full object-contain'
   }
 ];
 
@@ -37,7 +42,7 @@ export default function TechnologyPartners() {
           <p className="text-xl text-neutral-600">We collaborate with industry-leading technology partners to deliver exceptional solutions</p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center">
+        <div className="grid grid-cols-2 md:grid-cols-6 gap-8 items-center justify-items-center">
           {partnerLogos.map((partner, index) => (
             <div 
               key={partner.name} 
