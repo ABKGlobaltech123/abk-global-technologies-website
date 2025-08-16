@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
-import { Shield, Network, Database, Save, Cloud } from "lucide-react";
+import { Shield, Network, Database, Save, Cloud, Settings, Monitor, Headphones } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
@@ -37,19 +37,23 @@ export default function Home() {
   const serviceContent = {
     consulting: {
       title: "Consulting Services",
-      description: "Our Consulting Services cover advanced Virtualization, Cloud Computing, and Hyper-Converged Infrastructure to optimize IT performance. We ensure Backups & Disaster Recovery along with On-Premise & Cloud Storage for data security. Our solutions enhance Cybersecurity measures to safeguard businesses. We also specialize in Internet of Things (IoT) integration for smart connectivity."
+      description: "Our Consulting Services cover advanced Virtualization, Cloud Computing, and Hyper-Converged Infrastructure to optimize IT performance. We ensure Backups & Disaster Recovery along with On-Premise & Cloud Storage for data security. Our solutions enhance Cybersecurity measures to safeguard businesses. We also specialize in Internet of Things (IoT) integration for smart connectivity.",
+      icon: Settings
     },
     managed: {
       title: "Managed Services",
-      description: "ABK Global Technologies simplifies IT support by consolidating multiple vendor contracts into one expert-driven service. Our proactive onsite and remote support enhances availability, speeds up issue resolution, and minimizes downtime across your IT environment."
+      description: "ABK Global Technologies simplifies IT support by consolidating multiple vendor contracts into one expert-driven service. Our proactive onsite and remote support enhances availability, speeds up issue resolution, and minimizes downtime across your IT environment.",
+      icon: Monitor
     },
     cloud: {
       title: "Cloud Solutions",
-      description: "We provide cloud services across AWS, Azure, Google Cloud, and OpenStack. Our Cloud VDI solutions include AWS Workspaces, ensuring seamless virtual desktop experiences. For email, we offer Microsoft Office 365, G-Suite, and AWS WorkMail to enhance communication and collaboration."
+      description: "We provide cloud services across AWS, Azure, Google Cloud, and OpenStack. Our Cloud VDI solutions include AWS Workspaces, ensuring seamless virtual desktop experiences. For email, we offer Microsoft Office 365, G-Suite, and AWS WorkMail to enhance communication and collaboration.",
+      icon: Cloud
     },
     support: {
       title: "Support & Maintenance",
-      description: "Our technology partners offer proactive and predictive support, ensuring optimized IT investments and seamless operations. With advanced digital tools, we prevent issues before they escalate, maximizing uptime and efficiency. Our services include Workforce Solutions like Microsoft Office 365, Skype for Business, and Digital Workforce Portals, along with Digital Services such as Big Data, IoT, Cloud-Native Applications, and DevOps. Reach out for hassle-free, expert IT support."
+      description: "Our technology partners offer proactive and predictive support, ensuring optimized IT investments and seamless operations. With advanced digital tools, we prevent issues before they escalate, maximizing uptime and efficiency. Our services include Workforce Solutions like Microsoft Office 365, Skype for Business, and Digital Workforce Portals, along with Digital Services such as Big Data, IoT, Cloud-Native Applications, and DevOps. Reach out for hassle-free, expert IT support.",
+      icon: Headphones
     }
   };
 
@@ -194,7 +198,10 @@ export default function Home() {
               <div className="relative z-10">
                 <div className="flex items-center mb-8">
                   <div className="w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-2xl flex items-center justify-center mr-6">
-                    <div className="w-8 h-8 bg-white rounded-lg"></div>
+                    {(() => {
+                      const IconComponent = serviceContent[activeService as keyof typeof serviceContent].icon;
+                      return <IconComponent className="w-8 h-8 text-white" />;
+                    })()}
                   </div>
                   <h3 className="text-4xl font-bold text-primary">
                     {serviceContent[activeService as keyof typeof serviceContent].title}
