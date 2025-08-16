@@ -9,13 +9,12 @@ export default function Footer() {
         <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
           {/* Company Info */}
           <div>
-            <div className="flex items-center space-x-3 mb-6">
+            <div className="flex items-center mb-6">
               <img 
                 src={logoPath} 
                 alt="ABK Global Technologies" 
                 className="h-12 w-auto object-contain"
               />
-              <span className="text-xl font-bold">ABK Global Technologies</span>
             </div>
             <p className="text-neutral-400 mb-6">
               Your Vision, Our Innovation. Leading technology solutions provider delivering exceptional IT services and innovative digital solutions.
