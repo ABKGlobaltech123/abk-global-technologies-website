@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
-import { Shield, Network, Database, Save, Cloud, Settings, Wrench, Headphones } from "lucide-react";
+import { Shield, Network, Database, Save, Cloud, Lightbulb, Wrench, Headphones, Settings } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ServiceCard from "@/components/ServiceCard";
@@ -38,7 +38,7 @@ export default function Home() {
     consulting: {
       title: "Consulting Services",
       description: "Our Consulting Services cover advanced Virtualization, Cloud Computing, and Hyper-Converged Infrastructure to optimize IT performance. We ensure Backups & Disaster Recovery along with On-Premise & Cloud Storage for data security. Our solutions enhance Cybersecurity measures to safeguard businesses. We also specialize in Internet of Things (IoT) integration for smart connectivity.",
-      icon: Settings
+      icon: Lightbulb
     },
     managed: {
       title: "Managed Services",
