@@ -150,55 +150,6 @@ export default function CoreCompetence() {
               </div>
             </div>
 
-            {/* Certifications & Standards */}
-            <div className="mb-20">
-              <h3 className="text-3xl font-bold text-center text-accent mb-12">Certifications & Standards</h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div className="text-center p-6 bg-white rounded-2xl shadow-lg">
-                  <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <Award className="w-6 h-6 text-blue-500" />
-                  </div>
-                  <h5 className="font-bold text-neutral-900 mb-2">ISO 27001</h5>
-                  <p className="text-sm text-neutral-600">Information Security Management</p>
-                </div>
-                <div className="text-center p-6 bg-white rounded-2xl shadow-lg">
-                  <div className="w-12 h-12 bg-red-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <Award className="w-6 h-6 text-red-500" />
-                  </div>
-                  <h5 className="font-bold text-neutral-900 mb-2">AWS Certified</h5>
-                  <p className="text-sm text-neutral-600">Cloud Solutions Architecture</p>
-                </div>
-                <div className="text-center p-6 bg-white rounded-2xl shadow-lg">
-                  <div className="w-12 h-12 bg-blue-600/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <Award className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <h5 className="font-bold text-neutral-900 mb-2">Microsoft Certified</h5>
-                  <p className="text-sm text-neutral-600">Azure Solutions Expert</p>
-                </div>
-                <div className="text-center p-6 bg-white rounded-2xl shadow-lg">
-                  <div className="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <Award className="w-6 h-6 text-green-500" />
-                  </div>
-                  <h5 className="font-bold text-neutral-900 mb-2">CISSP</h5>
-                  <p className="text-sm text-neutral-600">Cybersecurity Professional</p>
-                </div>
-                <div className="text-center p-6 bg-white rounded-2xl shadow-lg">
-                  <div className="w-12 h-12 bg-purple-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <Award className="w-6 h-6 text-purple-500" />
-                  </div>
-                  <h5 className="font-bold text-neutral-900 mb-2">ITIL v4</h5>
-                  <p className="text-sm text-neutral-600">Service Management</p>
-                </div>
-                <div className="text-center p-6 bg-white rounded-2xl shadow-lg">
-                  <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <Award className="w-6 h-6 text-orange-500" />
-                  </div>
-                  <h5 className="font-bold text-neutral-900 mb-2">PMP</h5>
-                  <p className="text-sm text-neutral-600">Project Management Professional</p>
-                </div>
-              </div>
-            </div>
-
             {/* CTA Section */}
             <div className="bg-gradient-to-r from-accent to-primary p-12 rounded-3xl text-center text-white">
               <h3 className="text-3xl font-bold mb-4">Experience Our Expertise</h3>

@@ -79,60 +79,6 @@ export default function Clientele() {
               </div>
             </div>
 
-            {/* Client Success Stories */}
-            <div className="grid lg:grid-cols-2 gap-16 items-start mb-20">
-              <div>
-                <h3 className="text-3xl font-bold text-secondary mb-8">Client Success Stories</h3>
-                <div className="space-y-6">
-                  <div className="flex items-start">
-                    <div className="w-8 h-8 bg-secondary/20 rounded-lg flex items-center justify-center mr-4 mt-1">
-                      <Award className="w-4 h-4 text-secondary" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-neutral-900 mb-2">Enterprise Transformation</h4>
-                      <p className="text-neutral-600">Helped a Fortune 500 company reduce IT costs by 40% while improving system reliability and performance.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start">
-                    <div className="w-8 h-8 bg-secondary/20 rounded-lg flex items-center justify-center mr-4 mt-1">
-                      <TrendingUp className="w-4 h-4 text-secondary" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-neutral-900 mb-2">Cloud Migration Success</h4>
-                      <p className="text-neutral-600">Successfully migrated over 200 SME clients to cloud infrastructure with zero downtime.</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start">
-                    <div className="w-8 h-8 bg-secondary/20 rounded-lg flex items-center justify-center mr-4 mt-1">
-                      <Users className="w-4 h-4 text-secondary" />
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-neutral-900 mb-2">Security Implementation</h4>
-                      <p className="text-neutral-600">Deployed comprehensive security solutions protecting over 10,000 users across multiple organizations.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="bg-white p-8 rounded-3xl shadow-xl">
-                <h3 className="text-2xl font-bold text-secondary mb-6">Client Testimonials</h3>
-                <div className="space-y-6">
-                  <div className="p-4 bg-neutral-50 rounded-xl">
-                    <p className="text-sm text-neutral-600 mb-3 italic">"ABK Global Technologies transformed our IT infrastructure completely. Their expertise and dedication to our success made all the difference."</p>
-                    <div className="font-semibold text-neutral-900">Healthcare Organization</div>
-                  </div>
-                  <div className="p-4 bg-neutral-50 rounded-xl">
-                    <p className="text-sm text-neutral-600 mb-3 italic">"The cloud migration was seamless, and their ongoing support has been exceptional. Highly recommended."</p>
-                    <div className="font-semibold text-neutral-900">Financial Services Firm</div>
-                  </div>
-                  <div className="p-4 bg-neutral-50 rounded-xl">
-                    <p className="text-sm text-neutral-600 mb-3 italic">"Professional, reliable, and innovative. ABK Global Technologies is our trusted IT partner."</p>
-                    <div className="font-semibold text-neutral-900">Educational Institution</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
             {/* Partnership Benefits */}
             <div className="grid md:grid-cols-3 gap-8 mb-20">
               <div className="text-center p-8 bg-white rounded-2xl shadow-lg">
